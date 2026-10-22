@@ -1,0 +1,86 @@
+\doxysection{keyboards.\+pagination Namespace Reference}
+\hypertarget{namespacekeyboards_1_1pagination}{}\label{namespacekeyboards_1_1pagination}\index{keyboards.pagination@{keyboards.pagination}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple\+[list, int, int] \doxymbox{\hyperlink{namespacekeyboards_1_1pagination_a820188a57fb34b1192e3c01821e2dcdb}{get\+\_\+page\+\_\+items}} (list items, int page)
+\item 
+list\+[Inline\+Keyboard\+Button] \doxymbox{\hyperlink{namespacekeyboards_1_1pagination_a97fe02eaffe8bfd7cd84237c227fa25c}{pagination\+\_\+row}} (int page, int total\+\_\+pages, str back\+\_\+callback, str prev\+\_\+callback, str next\+\_\+callback)
+\item 
+list\+[Inline\+Keyboard\+Button] \doxymbox{\hyperlink{namespacekeyboards_1_1pagination_abe72fbd7e85894f2dcd02b39d2c1e7c2}{pagination\+\_\+arrows\+\_\+row}} (int page, int total\+\_\+pages, str prev\+\_\+callback, str next\+\_\+callback)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{namespacekeyboards_1_1pagination_a86477dcf5b5a4f94f63aae673a9b46e3}{PAGE\+\_\+\+SIZE}} = 5
+\begin{DoxyCompactList}\small\item\em Number of records rendered per page. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package keyboards
+@brief Module containing helper functions and layout generators for pagination.
+\end{DoxyVerb}
+ 
+
+\label{namespacekeyboards_1_1pagination_doc-func-members}
+\Hypertarget{namespacekeyboards_1_1pagination_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacekeyboards_1_1pagination_a820188a57fb34b1192e3c01821e2dcdb}\index{keyboards.pagination@{keyboards.pagination}!get\_page\_items@{get\_page\_items}}
+\index{get\_page\_items@{get\_page\_items}!keyboards.pagination@{keyboards.pagination}}
+\doxysubsubsection{\texorpdfstring{get\_page\_items()}{get\_page\_items()}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1pagination_a820188a57fb34b1192e3c01821e2dcdb} 
+ tuple\+[list, int, int]\+ get\+\_\+page\+\_\+items (\begin{DoxyParamCaption}\item[{list}]{items}{, }\item[{int}]{page}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Calculates pagination limits and extracts slice for current page.
+
+@param items Complete collection of elements.
+@param page Target page index.
+@return A tuple containing:
+        - Sublist of items for the page.
+        - Adjusted valid page index.
+        - Total computed pages count.
+\end{DoxyVerb}
+ \Hypertarget{namespacekeyboards_1_1pagination_abe72fbd7e85894f2dcd02b39d2c1e7c2}\index{keyboards.pagination@{keyboards.pagination}!pagination\_arrows\_row@{pagination\_arrows\_row}}
+\index{pagination\_arrows\_row@{pagination\_arrows\_row}!keyboards.pagination@{keyboards.pagination}}
+\doxysubsubsection{\texorpdfstring{pagination\_arrows\_row()}{pagination\_arrows\_row()}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1pagination_abe72fbd7e85894f2dcd02b39d2c1e7c2} 
+ list\+[Inline\+Keyboard\+Button]\+ pagination\+\_\+arrows\+\_\+row (\begin{DoxyParamCaption}\item[{int}]{page}{, }\item[{int}]{total\+\_\+pages}{, }\item[{str}]{prev\+\_\+callback}{, }\item[{str }]{next\+\_\+callback}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Generates a simplified pagination row consisting only of arrow buttons.
+
+@param page Current page index.
+@param total_pages Total page count.
+@param prev_callback Callback string for Previous button.
+@param next_callback Callback string for Next button.
+@return List containing active arrow buttons.
+\end{DoxyVerb}
+ \Hypertarget{namespacekeyboards_1_1pagination_a97fe02eaffe8bfd7cd84237c227fa25c}\index{keyboards.pagination@{keyboards.pagination}!pagination\_row@{pagination\_row}}
+\index{pagination\_row@{pagination\_row}!keyboards.pagination@{keyboards.pagination}}
+\doxysubsubsection{\texorpdfstring{pagination\_row()}{pagination\_row()}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1pagination_a97fe02eaffe8bfd7cd84237c227fa25c} 
+ list\+[Inline\+Keyboard\+Button]\+ pagination\+\_\+row (\begin{DoxyParamCaption}\item[{int}]{page}{, }\item[{int}]{total\+\_\+pages}{, }\item[{str}]{back\+\_\+callback}{, }\item[{str}]{prev\+\_\+callback}{, }\item[{str }]{next\+\_\+callback}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Generates a standard pagination row with Back, Previous, and Next buttons.
+
+@param page Current page index.
+@param total_pages Total number of pages.
+@param back_callback Callback string for Back button.
+@param prev_callback Callback string for Previous page button.
+@param next_callback Callback string for Next page button.
+@return List of inline buttons forming the navigation row.
+\end{DoxyVerb}
+ 
+
+\label{namespacekeyboards_1_1pagination_doc-var-members}
+\Hypertarget{namespacekeyboards_1_1pagination_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacekeyboards_1_1pagination_a86477dcf5b5a4f94f63aae673a9b46e3}\index{keyboards.pagination@{keyboards.pagination}!PAGE\_SIZE@{PAGE\_SIZE}}
+\index{PAGE\_SIZE@{PAGE\_SIZE}!keyboards.pagination@{keyboards.pagination}}
+\doxysubsubsection{\texorpdfstring{PAGE\_SIZE}{PAGE\_SIZE}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1pagination_a86477dcf5b5a4f94f63aae673a9b46e3} 
+int keyboards.\+pagination.\+PAGE\+\_\+\+SIZE = 5}
+
+
+
+Number of records rendered per page. 
+

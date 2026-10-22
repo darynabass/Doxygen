@@ -1,0 +1,157 @@
+\doxysection{handlers.\+add Namespace Reference}
+\hypertarget{namespacehandlers_1_1add}{}\label{namespacehandlers_1_1add}\index{handlers.add@{handlers.add}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{classhandlers_1_1add_1_1_add_item_states}{Add\+Item\+States}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1add_a88f3ab6966fc7980c306da60cb17a833}{add\+\_\+start}} (Message message, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1add_a3c178930428f7e2e20913b6a5c574f1b}{add\+\_\+text}} (Message message, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1add_a43319f2b5370ffc8b1e0ab80afbf5f13}{add\+\_\+without\+\_\+time}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1add_a83bc3eb27162a71064a40e31f46051e9}{add\+\_\+with\+\_\+time}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1add_aa8cdbaff9a0b8479a68ac4323b305eac}{add\+\_\+time\+\_\+preset}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1add_a38a20d23b0c1136d46165ac6ff61f1f5}{add\+\_\+datetime}} (Message message, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1add_af2f8ba872906e37e7675b70ed46222f3}{add\+\_\+select\+\_\+list\+\_\+page}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1add_ac8d34b2af1f12331f2123091a0826104}{add\+\_\+select\+\_\+list}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1add_a9ed0ff3a29accf070956994a30b313c6}{add\+\_\+priority}} (Callback\+Query callback, FSMContext state)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespacehandlers_1_1add_a17f725edc7b275d0c713f0222b84f271}{router}} = Router()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package handlers
+@brief Router for handling the step-by-step creation flow for notes and reminders.
+
+Guides the user through entering item text, specifying time/type, picking target lists,
+and selecting priority using finite state machine (FSM).
+\end{DoxyVerb}
+ 
+
+\label{namespacehandlers_1_1add_doc-func-members}
+\Hypertarget{namespacehandlers_1_1add_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacehandlers_1_1add_a38a20d23b0c1136d46165ac6ff61f1f5}\index{handlers.add@{handlers.add}!add\_datetime@{add\_datetime}}
+\index{add\_datetime@{add\_datetime}!handlers.add@{handlers.add}}
+\doxysubsubsection{\texorpdfstring{add\_datetime()}{add\_datetime()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1add_a38a20d23b0c1136d46165ac6ff61f1f5} 
+ None add\+\_\+datetime (\begin{DoxyParamCaption}\item[{Message}]{message}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Validates manually typed datetime string and moves to list selection.
+
+@param message Incoming Telegram Message instance.
+@param state FSM context.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1add_a9ed0ff3a29accf070956994a30b313c6}\index{handlers.add@{handlers.add}!add\_priority@{add\_priority}}
+\index{add\_priority@{add\_priority}!handlers.add@{handlers.add}}
+\doxysubsubsection{\texorpdfstring{add\_priority()}{add\_priority()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1add_a9ed0ff3a29accf070956994a30b313c6} 
+ None add\+\_\+priority (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Finalizes priority selection, creates the item in DB, and completes FSM flow.
+
+@param callback Incoming CallbackQuery instance.
+@param state FSM context.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1add_ac8d34b2af1f12331f2123091a0826104}\index{handlers.add@{handlers.add}!add\_select\_list@{add\_select\_list}}
+\index{add\_select\_list@{add\_select\_list}!handlers.add@{handlers.add}}
+\doxysubsubsection{\texorpdfstring{add\_select\_list()}{add\_select\_list()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1add_ac8d34b2af1f12331f2123091a0826104} 
+ None add\+\_\+select\+\_\+list (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Saves selected list ID and prompts for priority level selection.
+
+@param callback Incoming CallbackQuery instance.
+@param state FSM context.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1add_af2f8ba872906e37e7675b70ed46222f3}\index{handlers.add@{handlers.add}!add\_select\_list\_page@{add\_select\_list\_page}}
+\index{add\_select\_list\_page@{add\_select\_list\_page}!handlers.add@{handlers.add}}
+\doxysubsubsection{\texorpdfstring{add\_select\_list\_page()}{add\_select\_list\_page()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1add_af2f8ba872906e37e7675b70ed46222f3} 
+ None add\+\_\+select\+\_\+list\+\_\+page (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Handles pagination for list selection inline keyboard.
+
+@param callback Incoming CallbackQuery instance.
+@param state FSM context.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1add_a88f3ab6966fc7980c306da60cb17a833}\index{handlers.add@{handlers.add}!add\_start@{add\_start}}
+\index{add\_start@{add\_start}!handlers.add@{handlers.add}}
+\doxysubsubsection{\texorpdfstring{add\_start()}{add\_start()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1add_a88f3ab6966fc7980c306da60cb17a833} 
+ None add\+\_\+start (\begin{DoxyParamCaption}\item[{Message}]{message}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Starts the item creation flow and prompts the user for text content.
+
+@param message Incoming Telegram Message instance.
+@param state FSM context.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1add_a3c178930428f7e2e20913b6a5c574f1b}\index{handlers.add@{handlers.add}!add\_text@{add\_text}}
+\index{add\_text@{add\_text}!handlers.add@{handlers.add}}
+\doxysubsubsection{\texorpdfstring{add\_text()}{add\_text()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1add_a3c178930428f7e2e20913b6a5c574f1b} 
+ None add\+\_\+text (\begin{DoxyParamCaption}\item[{Message}]{message}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Validates item text input and asks whether to add a reminder time.
+
+@param message Incoming Telegram Message instance.
+@param state FSM context.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1add_aa8cdbaff9a0b8479a68ac4323b305eac}\index{handlers.add@{handlers.add}!add\_time\_preset@{add\_time\_preset}}
+\index{add\_time\_preset@{add\_time\_preset}!handlers.add@{handlers.add}}
+\doxysubsubsection{\texorpdfstring{add\_time\_preset()}{add\_time\_preset()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1add_aa8cdbaff9a0b8479a68ac4323b305eac} 
+ None add\+\_\+time\+\_\+preset (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Handles quick time selection button presses.
+
+@param callback Incoming CallbackQuery instance.
+@param state FSM context.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1add_a83bc3eb27162a71064a40e31f46051e9}\index{handlers.add@{handlers.add}!add\_with\_time@{add\_with\_time}}
+\index{add\_with\_time@{add\_with\_time}!handlers.add@{handlers.add}}
+\doxysubsubsection{\texorpdfstring{add\_with\_time()}{add\_with\_time()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1add_a83bc3eb27162a71064a40e31f46051e9} 
+ None add\+\_\+with\+\_\+time (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Handles reminder option and prompts for datetime input or quick presets.
+
+@param callback Incoming CallbackQuery instance.
+@param state FSM context.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1add_a43319f2b5370ffc8b1e0ab80afbf5f13}\index{handlers.add@{handlers.add}!add\_without\_time@{add\_without\_time}}
+\index{add\_without\_time@{add\_without\_time}!handlers.add@{handlers.add}}
+\doxysubsubsection{\texorpdfstring{add\_without\_time()}{add\_without\_time()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1add_a43319f2b5370ffc8b1e0ab80afbf5f13} 
+ None add\+\_\+without\+\_\+time (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Handles note option (no time attached) and prompts for priority.
+
+@param callback Incoming CallbackQuery instance.
+@param state FSM context.
+\end{DoxyVerb}
+ 
+
+\label{namespacehandlers_1_1add_doc-var-members}
+\Hypertarget{namespacehandlers_1_1add_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacehandlers_1_1add_a17f725edc7b275d0c713f0222b84f271}\index{handlers.add@{handlers.add}!router@{router}}
+\index{router@{router}!handlers.add@{handlers.add}}
+\doxysubsubsection{\texorpdfstring{router}{router}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1add_a17f725edc7b275d0c713f0222b84f271} 
+handlers.\+add.\+router = Router()}
+

@@ -1,0 +1,133 @@
+\doxysection{keyboards.\+item\+\_\+keyboards Namespace Reference}
+\hypertarget{namespacekeyboards_1_1item__keyboards}{}\label{namespacekeyboards_1_1item__keyboards}\index{keyboards.item\_keyboards@{keyboards.item\_keyboards}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Inline\+Keyboard\+Markup \doxymbox{\hyperlink{namespacekeyboards_1_1item__keyboards_a69d62551e58de058fe94fd7b244550dc}{items\+\_\+keyboard}} (list\+[dict]\+ items, int list\+\_\+id, int page=0)
+\item 
+Inline\+Keyboard\+Markup \doxymbox{\hyperlink{namespacekeyboards_1_1item__keyboards_ad3b5839c0636f2340c98ed6b56ff66d8}{item\+\_\+actions\+\_\+keyboard}} (int item\+\_\+id, str item\+\_\+type, str status, int\texorpdfstring{$\vert$}{|}None list\+\_\+id=None, int page=0, str\texorpdfstring{$\vert$}{|}None back\+\_\+callback=None)
+\item 
+Inline\+Keyboard\+Markup \doxymbox{\hyperlink{namespacekeyboards_1_1item__keyboards_ad5e1e941be7647ff21c33371f69cbc98}{confirm\+\_\+delete\+\_\+item\+\_\+keyboard}} (int item\+\_\+id)
+\item 
+Inline\+Keyboard\+Markup \doxymbox{\hyperlink{namespacekeyboards_1_1item__keyboards_adf1543f433a47c0f78590056840a2d21}{back\+\_\+to\+\_\+item\+\_\+keyboard}} (int item\+\_\+id, bool new\+\_\+message=False)
+\item 
+Inline\+Keyboard\+Markup \doxymbox{\hyperlink{namespacekeyboards_1_1item__keyboards_a145ba76d7796d86e1943a575c1d0f31f}{notes\+\_\+keyboard}} (list\+[dict]\+ items, int page=0)
+\item 
+Inline\+Keyboard\+Markup \doxymbox{\hyperlink{namespacekeyboards_1_1item__keyboards_a02e3e16b97728b3637a6d1181e21f7e6}{reminders\+\_\+keyboard}} (list\+[dict]\+ items, int page=0)
+\item 
+Inline\+Keyboard\+Markup \doxymbox{\hyperlink{namespacekeyboards_1_1item__keyboards_ab855448d108cead1a09862e30181a0fd}{edit\+\_\+priority\+\_\+keyboard}} (int item\+\_\+id)
+\item 
+Inline\+Keyboard\+Markup \doxymbox{\hyperlink{namespacekeyboards_1_1item__keyboards_a750fb104615dcd15e7cd87c1c25ace1b}{back\+\_\+after\+\_\+delete\+\_\+keyboard}} (str source, int\texorpdfstring{$\vert$}{|}None list\+\_\+id=None, int page=0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package keyboards
+@brief Module for inline keyboards associated with viewing and managing single/multiple items.
+\end{DoxyVerb}
+ 
+
+\label{namespacekeyboards_1_1item__keyboards_doc-func-members}
+\Hypertarget{namespacekeyboards_1_1item__keyboards_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacekeyboards_1_1item__keyboards_a750fb104615dcd15e7cd87c1c25ace1b}\index{keyboards.item\_keyboards@{keyboards.item\_keyboards}!back\_after\_delete\_keyboard@{back\_after\_delete\_keyboard}}
+\index{back\_after\_delete\_keyboard@{back\_after\_delete\_keyboard}!keyboards.item\_keyboards@{keyboards.item\_keyboards}}
+\doxysubsubsection{\texorpdfstring{back\_after\_delete\_keyboard()}{back\_after\_delete\_keyboard()}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1item__keyboards_a750fb104615dcd15e7cd87c1c25ace1b} 
+ Inline\+Keyboard\+Markup back\+\_\+after\+\_\+delete\+\_\+keyboard (\begin{DoxyParamCaption}\item[{str}]{source}{, }\item[{int \texorpdfstring{$\vert$}{|} None }]{list\+\_\+id}{ = {\ttfamily None}, }\item[{int }]{page}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Creates a keyboard to navigate back after an item deletion.
+
+@param source Origin view source ('notes', 'reminders', 'lists').
+@param list_id Target list ID if originating from list view.
+@param page Previous active page number.
+@return Back navigation inline keyboard.
+\end{DoxyVerb}
+ \Hypertarget{namespacekeyboards_1_1item__keyboards_adf1543f433a47c0f78590056840a2d21}\index{keyboards.item\_keyboards@{keyboards.item\_keyboards}!back\_to\_item\_keyboard@{back\_to\_item\_keyboard}}
+\index{back\_to\_item\_keyboard@{back\_to\_item\_keyboard}!keyboards.item\_keyboards@{keyboards.item\_keyboards}}
+\doxysubsubsection{\texorpdfstring{back\_to\_item\_keyboard()}{back\_to\_item\_keyboard()}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1item__keyboards_adf1543f433a47c0f78590056840a2d21} 
+ Inline\+Keyboard\+Markup back\+\_\+to\+\_\+item\+\_\+keyboard (\begin{DoxyParamCaption}\item[{int}]{item\+\_\+id}{, }\item[{bool }]{new\+\_\+message}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Creates a navigation keyboard returning to the item detail view.
+
+@param item_id Target item identifier.
+@param new_message Whether action requires sending a new message.
+@return Keyboard containing back button.
+\end{DoxyVerb}
+ \Hypertarget{namespacekeyboards_1_1item__keyboards_ad5e1e941be7647ff21c33371f69cbc98}\index{keyboards.item\_keyboards@{keyboards.item\_keyboards}!confirm\_delete\_item\_keyboard@{confirm\_delete\_item\_keyboard}}
+\index{confirm\_delete\_item\_keyboard@{confirm\_delete\_item\_keyboard}!keyboards.item\_keyboards@{keyboards.item\_keyboards}}
+\doxysubsubsection{\texorpdfstring{confirm\_delete\_item\_keyboard()}{confirm\_delete\_item\_keyboard()}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1item__keyboards_ad5e1e941be7647ff21c33371f69cbc98} 
+ Inline\+Keyboard\+Markup confirm\+\_\+delete\+\_\+item\+\_\+keyboard (\begin{DoxyParamCaption}\item[{int}]{item\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Creates a confirmation keyboard for deleting an item.
+
+@param item_id Item ID to confirm deletion for.
+@return Keyboard with confirm/cancel buttons.
+\end{DoxyVerb}
+ \Hypertarget{namespacekeyboards_1_1item__keyboards_ab855448d108cead1a09862e30181a0fd}\index{keyboards.item\_keyboards@{keyboards.item\_keyboards}!edit\_priority\_keyboard@{edit\_priority\_keyboard}}
+\index{edit\_priority\_keyboard@{edit\_priority\_keyboard}!keyboards.item\_keyboards@{keyboards.item\_keyboards}}
+\doxysubsubsection{\texorpdfstring{edit\_priority\_keyboard()}{edit\_priority\_keyboard()}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1item__keyboards_ab855448d108cead1a09862e30181a0fd} 
+ Inline\+Keyboard\+Markup edit\+\_\+priority\+\_\+keyboard (\begin{DoxyParamCaption}\item[{int}]{item\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Creates a keyboard for selecting a new priority for an existing item.
+
+@param item_id Target item identifier.
+@return Inline keyboard with priority options.
+\end{DoxyVerb}
+ \Hypertarget{namespacekeyboards_1_1item__keyboards_ad3b5839c0636f2340c98ed6b56ff66d8}\index{keyboards.item\_keyboards@{keyboards.item\_keyboards}!item\_actions\_keyboard@{item\_actions\_keyboard}}
+\index{item\_actions\_keyboard@{item\_actions\_keyboard}!keyboards.item\_keyboards@{keyboards.item\_keyboards}}
+\doxysubsubsection{\texorpdfstring{item\_actions\_keyboard()}{item\_actions\_keyboard()}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1item__keyboards_ad3b5839c0636f2340c98ed6b56ff66d8} 
+ Inline\+Keyboard\+Markup item\+\_\+actions\+\_\+keyboard (\begin{DoxyParamCaption}\item[{int}]{item\+\_\+id}{, }\item[{str}]{item\+\_\+type}{, }\item[{str}]{status}{, }\item[{int \texorpdfstring{$\vert$}{|} None }]{list\+\_\+id}{ = {\ttfamily None}, }\item[{int }]{page}{ = {\ttfamily 0}, }\item[{str \texorpdfstring{$\vert$}{|} None }]{back\+\_\+callback}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Creates a keyboard containing contextual actions for a specific item.
+
+@param item_id Unique identifier of the item.
+@param item_type Type of the item ('note' or 'reminder').
+@param status Current status of the item.
+@param list_id Associated list ID.
+@param page Page index to return to.
+@param back_callback Custom back navigation payload.
+@return Keyboard with edit, delete, and navigation options.
+\end{DoxyVerb}
+ \Hypertarget{namespacekeyboards_1_1item__keyboards_a69d62551e58de058fe94fd7b244550dc}\index{keyboards.item\_keyboards@{keyboards.item\_keyboards}!items\_keyboard@{items\_keyboard}}
+\index{items\_keyboard@{items\_keyboard}!keyboards.item\_keyboards@{keyboards.item\_keyboards}}
+\doxysubsubsection{\texorpdfstring{items\_keyboard()}{items\_keyboard()}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1item__keyboards_a69d62551e58de058fe94fd7b244550dc} 
+ Inline\+Keyboard\+Markup items\+\_\+keyboard (\begin{DoxyParamCaption}\item[{list\+[dict]}]{items}{, }\item[{int}]{list\+\_\+id}{, }\item[{int }]{page}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Creates a keyboard listing items belonging to a specific list.
+
+@param items Item dictionary collection.
+@param list_id Target list identifier.
+@param page Current page index.
+@return Inline keyboard containing items and pagination controls.
+\end{DoxyVerb}
+ \Hypertarget{namespacekeyboards_1_1item__keyboards_a145ba76d7796d86e1943a575c1d0f31f}\index{keyboards.item\_keyboards@{keyboards.item\_keyboards}!notes\_keyboard@{notes\_keyboard}}
+\index{notes\_keyboard@{notes\_keyboard}!keyboards.item\_keyboards@{keyboards.item\_keyboards}}
+\doxysubsubsection{\texorpdfstring{notes\_keyboard()}{notes\_keyboard()}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1item__keyboards_a145ba76d7796d86e1943a575c1d0f31f} 
+ Inline\+Keyboard\+Markup notes\+\_\+keyboard (\begin{DoxyParamCaption}\item[{list\+[dict]}]{items}{, }\item[{int }]{page}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Creates a paginated keyboard list of notes.
+
+@param items Collection of note items.
+@param page Current page index.
+@return Paginated notes list keyboard.
+\end{DoxyVerb}
+ \Hypertarget{namespacekeyboards_1_1item__keyboards_a02e3e16b97728b3637a6d1181e21f7e6}\index{keyboards.item\_keyboards@{keyboards.item\_keyboards}!reminders\_keyboard@{reminders\_keyboard}}
+\index{reminders\_keyboard@{reminders\_keyboard}!keyboards.item\_keyboards@{keyboards.item\_keyboards}}
+\doxysubsubsection{\texorpdfstring{reminders\_keyboard()}{reminders\_keyboard()}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1item__keyboards_a02e3e16b97728b3637a6d1181e21f7e6} 
+ Inline\+Keyboard\+Markup reminders\+\_\+keyboard (\begin{DoxyParamCaption}\item[{list\+[dict]}]{items}{, }\item[{int }]{page}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Creates a paginated keyboard list of reminders.
+
+@param items Collection of reminder items.
+@param page Current page index.
+@return Paginated reminders list keyboard.
+\end{DoxyVerb}
+ 

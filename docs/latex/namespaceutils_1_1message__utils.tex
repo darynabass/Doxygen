@@ -1,0 +1,43 @@
+\doxysection{utils.\+message\+\_\+utils Namespace Reference}
+\hypertarget{namespaceutils_1_1message__utils}{}\label{namespaceutils_1_1message__utils}\index{utils.message\_utils@{utils.message\_utils}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \doxymbox{\hyperlink{namespaceutils_1_1message__utils_a1cf1a51a6f9bc3d89ca9f7e45a02d71b}{remove\+\_\+old\+\_\+inline\+\_\+keyboard}} (Message message, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespaceutils_1_1message__utils_af4d0b774a615a4592ce839626d2e97c1}{save\+\_\+active\+\_\+inline\+\_\+message}} (Message sent\+\_\+message, FSMContext state)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package utils
+@brief Module containing message editing and UI state persistence tools.
+\end{DoxyVerb}
+ 
+
+\label{namespaceutils_1_1message__utils_doc-func-members}
+\Hypertarget{namespaceutils_1_1message__utils_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceutils_1_1message__utils_a1cf1a51a6f9bc3d89ca9f7e45a02d71b}\index{utils.message\_utils@{utils.message\_utils}!remove\_old\_inline\_keyboard@{remove\_old\_inline\_keyboard}}
+\index{remove\_old\_inline\_keyboard@{remove\_old\_inline\_keyboard}!utils.message\_utils@{utils.message\_utils}}
+\doxysubsubsection{\texorpdfstring{remove\_old\_inline\_keyboard()}{remove\_old\_inline\_keyboard()}}
+{\footnotesize\ttfamily \label{namespaceutils_1_1message__utils_a1cf1a51a6f9bc3d89ca9f7e45a02d71b} 
+ None remove\+\_\+old\+\_\+inline\+\_\+keyboard (\begin{DoxyParamCaption}\item[{Message}]{message}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Removes inline markup from the previous active state message to prevent stale interaction.
+
+@param message Telegram message instance to obtain bot context.
+@param state Finite State Machine context.
+\end{DoxyVerb}
+ \Hypertarget{namespaceutils_1_1message__utils_af4d0b774a615a4592ce839626d2e97c1}\index{utils.message\_utils@{utils.message\_utils}!save\_active\_inline\_message@{save\_active\_inline\_message}}
+\index{save\_active\_inline\_message@{save\_active\_inline\_message}!utils.message\_utils@{utils.message\_utils}}
+\doxysubsubsection{\texorpdfstring{save\_active\_inline\_message()}{save\_active\_inline\_message()}}
+{\footnotesize\ttfamily \label{namespaceutils_1_1message__utils_af4d0b774a615a4592ce839626d2e97c1} 
+ None save\+\_\+active\+\_\+inline\+\_\+message (\begin{DoxyParamCaption}\item[{Message}]{sent\+\_\+message}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Stores the identifiers of an active inline message inside FSM state.
+
+@param sent_message Newly dispatched Telegram message containing inline markup.
+@param state Finite State Machine context.
+\end{DoxyVerb}
+ 

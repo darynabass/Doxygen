@@ -1,0 +1,96 @@
+\doxysection{main Namespace Reference}
+\hypertarget{namespacemain}{}\label{namespacemain}\index{main@{main}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \doxymbox{\hyperlink{namespacemain_a7ef7e0ba4dbb24a9678021d2cf41cfc6}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespacemain_a4be37a2f0fd5982d6140d1a6ed3a674b}{LOGS\+\_\+\+DIR}} = Path("{}logs"{})
+\begin{DoxyCompactList}\small\item\em Path to the directory where log files are stored. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{namespacemain_ab0bf13547032e9bb1cc6c8ede308794a}{exist\+\_\+ok}}
+\item 
+\doxymbox{\hyperlink{namespacemain_ad39dcd94f0ffc845ab416c0783c20d25}{level}}
+\item 
+\doxymbox{\hyperlink{namespacemain_a758a4b3c52742d78aa30e49d058acea4}{format}}
+\item 
+\doxymbox{\hyperlink{namespacemain_abc8fd2c6474f154e4b0bc05a0a64aa82}{handlers}}
+\item 
+\doxymbox{\hyperlink{namespacemain_ae1d4a0295c904f672a1f044188274bf1}{logger}} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\_)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package smart_noter_bot
+@brief Main entry point for starting and running the Smart Noter Telegram Bot.
+
+Initializes logging, connects handlers, runs the background reminder worker,
+and starts long polling.
+\end{DoxyVerb}
+ 
+
+\label{namespacemain_doc-func-members}
+\Hypertarget{namespacemain_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacemain_a7ef7e0ba4dbb24a9678021d2cf41cfc6}\index{main@{main}!main@{main}}
+\index{main@{main}!main@{main}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacemain_a7ef7e0ba4dbb24a9678021d2cf41cfc6} 
+ None main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Asynchronous main function to initialize and start the bot.
+
+Performs the following initialization steps:
+1. Initializes the SQLite database schema.
+2. Instantiates the Telegram Bot and resets webhooks.
+3. Registers all application routers (handlers) with the Dispatcher.
+4. Launches the background task for reminder monitoring.
+5. Starts long polling to listen for incoming Telegram updates.
+\end{DoxyVerb}
+ 
+
+\label{namespacemain_doc-var-members}
+\Hypertarget{namespacemain_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacemain_ab0bf13547032e9bb1cc6c8ede308794a}\index{main@{main}!exist\_ok@{exist\_ok}}
+\index{exist\_ok@{exist\_ok}!main@{main}}
+\doxysubsubsection{\texorpdfstring{exist\_ok}{exist\_ok}}
+{\footnotesize\ttfamily \label{namespacemain_ab0bf13547032e9bb1cc6c8ede308794a} 
+main.\+exist\+\_\+ok}
+
+\Hypertarget{namespacemain_a758a4b3c52742d78aa30e49d058acea4}\index{main@{main}!format@{format}}
+\index{format@{format}!main@{main}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily \label{namespacemain_a758a4b3c52742d78aa30e49d058acea4} 
+main.\+format}
+
+\Hypertarget{namespacemain_abc8fd2c6474f154e4b0bc05a0a64aa82}\index{main@{main}!handlers@{handlers}}
+\index{handlers@{handlers}!main@{main}}
+\doxysubsubsection{\texorpdfstring{handlers}{handlers}}
+{\footnotesize\ttfamily \label{namespacemain_abc8fd2c6474f154e4b0bc05a0a64aa82} 
+main.\+handlers}
+
+\Hypertarget{namespacemain_ad39dcd94f0ffc845ab416c0783c20d25}\index{main@{main}!level@{level}}
+\index{level@{level}!main@{main}}
+\doxysubsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily \label{namespacemain_ad39dcd94f0ffc845ab416c0783c20d25} 
+main.\+level}
+
+\Hypertarget{namespacemain_ae1d4a0295c904f672a1f044188274bf1}\index{main@{main}!logger@{logger}}
+\index{logger@{logger}!main@{main}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily \label{namespacemain_ae1d4a0295c904f672a1f044188274bf1} 
+main.\+logger = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\_)}
+
+\Hypertarget{namespacemain_a4be37a2f0fd5982d6140d1a6ed3a674b}\index{main@{main}!LOGS\_DIR@{LOGS\_DIR}}
+\index{LOGS\_DIR@{LOGS\_DIR}!main@{main}}
+\doxysubsubsection{\texorpdfstring{LOGS\_DIR}{LOGS\_DIR}}
+{\footnotesize\ttfamily \label{namespacemain_a4be37a2f0fd5982d6140d1a6ed3a674b} 
+main.\+LOGS\+\_\+\+DIR = Path("{}logs"{})}
+
+
+
+Path to the directory where log files are stored. 
+

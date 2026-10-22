@@ -1,0 +1,112 @@
+\doxysection{utils.\+text\+\_\+utils Namespace Reference}
+\hypertarget{namespaceutils_1_1text__utils}{}\label{namespaceutils_1_1text__utils}\index{utils.text\_utils@{utils.text\_utils}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{namespaceutils_1_1text__utils_a5d3d62f2b5f628ea0c70d8e0e54e346c}{is\+\_\+valid\+\_\+item\+\_\+text}} (str text)
+\item 
+bool \doxymbox{\hyperlink{namespaceutils_1_1text__utils_a6aea4230f7c5136e8b63c3b545dcece1}{is\+\_\+valid\+\_\+list\+\_\+name}} (str name)
+\item 
+str \doxymbox{\hyperlink{namespaceutils_1_1text__utils_ae2c49597e90ef5c1c1f82cdfcf59f564}{cut\+\_\+text}} (str text, int max\+\_\+length)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{namespaceutils_1_1text__utils_ac949233fa3f3a9f03d7a9914292587b6}{MAX\+\_\+\+ITEM\+\_\+\+TEXT\+\_\+\+LENGTH}} = 4000
+\begin{DoxyCompactList}\small\item\em Maximum allowed character length for an item (note/\+reminder) text. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{namespaceutils_1_1text__utils_a49b0a7641788f47336f2c247fb0465fb}{MAX\+\_\+\+LIST\+\_\+\+NAME\+\_\+\+LENGTH}} = 30
+\begin{DoxyCompactList}\small\item\em Maximum allowed character length for a list name. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{namespaceutils_1_1text__utils_aa5274e30ccac34660ecc7a529355f63c}{ITEM\+\_\+\+BUTTON\+\_\+\+TEXT\+\_\+\+LENGTH}} = 35
+\begin{DoxyCompactList}\small\item\em Truncation length limit for items displayed in inline keyboard buttons. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{namespaceutils_1_1text__utils_a6a64b856adf2a2ec65a68795da1f03fc}{LIST\+\_\+\+BUTTON\+\_\+\+TEXT\+\_\+\+LENGTH}} = 25
+\begin{DoxyCompactList}\small\item\em Truncation length limit for list names displayed in inline keyboard buttons. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package utils
+@brief Module for text validation, trimming, and formatting limits.
+\end{DoxyVerb}
+ 
+
+\label{namespaceutils_1_1text__utils_doc-func-members}
+\Hypertarget{namespaceutils_1_1text__utils_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceutils_1_1text__utils_ae2c49597e90ef5c1c1f82cdfcf59f564}\index{utils.text\_utils@{utils.text\_utils}!cut\_text@{cut\_text}}
+\index{cut\_text@{cut\_text}!utils.text\_utils@{utils.text\_utils}}
+\doxysubsubsection{\texorpdfstring{cut\_text()}{cut\_text()}}
+{\footnotesize\ttfamily \label{namespaceutils_1_1text__utils_ae2c49597e90ef5c1c1f82cdfcf59f564} 
+ str cut\+\_\+text (\begin{DoxyParamCaption}\item[{str}]{text}{, }\item[{int}]{max\+\_\+length}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Truncates a string to a specified length and appends an ellipsis if exceeded.
+
+@param text Target text to be truncated.
+@param max_length Maximum allowed character length before truncation.
+@return Truncated text with '...' appended if length exceeds limit, or original text.
+\end{DoxyVerb}
+ \Hypertarget{namespaceutils_1_1text__utils_a5d3d62f2b5f628ea0c70d8e0e54e346c}\index{utils.text\_utils@{utils.text\_utils}!is\_valid\_item\_text@{is\_valid\_item\_text}}
+\index{is\_valid\_item\_text@{is\_valid\_item\_text}!utils.text\_utils@{utils.text\_utils}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_item\_text()}{is\_valid\_item\_text()}}
+{\footnotesize\ttfamily \label{namespaceutils_1_1text__utils_a5d3d62f2b5f628ea0c70d8e0e54e346c} 
+ bool is\+\_\+valid\+\_\+item\+\_\+text (\begin{DoxyParamCaption}\item[{str}]{text}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Validates whether an item text length falls within allowed boundaries.
+
+@param text Raw input string to check.
+@return True if text length is between 1 and MAX_ITEM_TEXT_LENGTH, False otherwise.
+\end{DoxyVerb}
+ \Hypertarget{namespaceutils_1_1text__utils_a6aea4230f7c5136e8b63c3b545dcece1}\index{utils.text\_utils@{utils.text\_utils}!is\_valid\_list\_name@{is\_valid\_list\_name}}
+\index{is\_valid\_list\_name@{is\_valid\_list\_name}!utils.text\_utils@{utils.text\_utils}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_list\_name()}{is\_valid\_list\_name()}}
+{\footnotesize\ttfamily \label{namespaceutils_1_1text__utils_a6aea4230f7c5136e8b63c3b545dcece1} 
+ bool is\+\_\+valid\+\_\+list\+\_\+name (\begin{DoxyParamCaption}\item[{str}]{name}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Validates whether a list name length falls within allowed boundaries.
+
+@param name Raw input list name to check.
+@return True if name length is between 2 and MAX_LIST_NAME_LENGTH, False otherwise.
+\end{DoxyVerb}
+ 
+
+\label{namespaceutils_1_1text__utils_doc-var-members}
+\Hypertarget{namespaceutils_1_1text__utils_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceutils_1_1text__utils_aa5274e30ccac34660ecc7a529355f63c}\index{utils.text\_utils@{utils.text\_utils}!ITEM\_BUTTON\_TEXT\_LENGTH@{ITEM\_BUTTON\_TEXT\_LENGTH}}
+\index{ITEM\_BUTTON\_TEXT\_LENGTH@{ITEM\_BUTTON\_TEXT\_LENGTH}!utils.text\_utils@{utils.text\_utils}}
+\doxysubsubsection{\texorpdfstring{ITEM\_BUTTON\_TEXT\_LENGTH}{ITEM\_BUTTON\_TEXT\_LENGTH}}
+{\footnotesize\ttfamily \label{namespaceutils_1_1text__utils_aa5274e30ccac34660ecc7a529355f63c} 
+int utils.\+text\+\_\+utils.\+ITEM\+\_\+\+BUTTON\+\_\+\+TEXT\+\_\+\+LENGTH = 35}
+
+
+
+Truncation length limit for items displayed in inline keyboard buttons. 
+
+\Hypertarget{namespaceutils_1_1text__utils_a6a64b856adf2a2ec65a68795da1f03fc}\index{utils.text\_utils@{utils.text\_utils}!LIST\_BUTTON\_TEXT\_LENGTH@{LIST\_BUTTON\_TEXT\_LENGTH}}
+\index{LIST\_BUTTON\_TEXT\_LENGTH@{LIST\_BUTTON\_TEXT\_LENGTH}!utils.text\_utils@{utils.text\_utils}}
+\doxysubsubsection{\texorpdfstring{LIST\_BUTTON\_TEXT\_LENGTH}{LIST\_BUTTON\_TEXT\_LENGTH}}
+{\footnotesize\ttfamily \label{namespaceutils_1_1text__utils_a6a64b856adf2a2ec65a68795da1f03fc} 
+int utils.\+text\+\_\+utils.\+LIST\+\_\+\+BUTTON\+\_\+\+TEXT\+\_\+\+LENGTH = 25}
+
+
+
+Truncation length limit for list names displayed in inline keyboard buttons. 
+
+\Hypertarget{namespaceutils_1_1text__utils_ac949233fa3f3a9f03d7a9914292587b6}\index{utils.text\_utils@{utils.text\_utils}!MAX\_ITEM\_TEXT\_LENGTH@{MAX\_ITEM\_TEXT\_LENGTH}}
+\index{MAX\_ITEM\_TEXT\_LENGTH@{MAX\_ITEM\_TEXT\_LENGTH}!utils.text\_utils@{utils.text\_utils}}
+\doxysubsubsection{\texorpdfstring{MAX\_ITEM\_TEXT\_LENGTH}{MAX\_ITEM\_TEXT\_LENGTH}}
+{\footnotesize\ttfamily \label{namespaceutils_1_1text__utils_ac949233fa3f3a9f03d7a9914292587b6} 
+int utils.\+text\+\_\+utils.\+MAX\+\_\+\+ITEM\+\_\+\+TEXT\+\_\+\+LENGTH = 4000}
+
+
+
+Maximum allowed character length for an item (note/\+reminder) text. 
+
+\Hypertarget{namespaceutils_1_1text__utils_a49b0a7641788f47336f2c247fb0465fb}\index{utils.text\_utils@{utils.text\_utils}!MAX\_LIST\_NAME\_LENGTH@{MAX\_LIST\_NAME\_LENGTH}}
+\index{MAX\_LIST\_NAME\_LENGTH@{MAX\_LIST\_NAME\_LENGTH}!utils.text\_utils@{utils.text\_utils}}
+\doxysubsubsection{\texorpdfstring{MAX\_LIST\_NAME\_LENGTH}{MAX\_LIST\_NAME\_LENGTH}}
+{\footnotesize\ttfamily \label{namespaceutils_1_1text__utils_a49b0a7641788f47336f2c247fb0465fb} 
+int utils.\+text\+\_\+utils.\+MAX\+\_\+\+LIST\+\_\+\+NAME\+\_\+\+LENGTH = 30}
+
+
+
+Maximum allowed character length for a list name. 
+

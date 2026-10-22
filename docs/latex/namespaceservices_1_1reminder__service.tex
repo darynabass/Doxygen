@@ -1,0 +1,47 @@
+\doxysection{services.\+reminder\+\_\+service Namespace Reference}
+\hypertarget{namespaceservices_1_1reminder__service}{}\label{namespaceservices_1_1reminder__service}\index{services.reminder\_service@{services.reminder\_service}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \doxymbox{\hyperlink{namespaceservices_1_1reminder__service_a20dc018bc58cc2d0f6860e588cccec23}{reminder\+\_\+worker}} (Bot bot)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespaceservices_1_1reminder__service_af77ae8e87a4b0a70363ecaba6e3ad45c}{logger}} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\_)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package services
+@brief Background task worker for dispatching scheduled reminder notifications.
+
+Runs an infinite loop checking for due reminders at configured intervals and sends
+Telegram messages to recipient users.
+\end{DoxyVerb}
+ 
+
+\label{namespaceservices_1_1reminder__service_doc-func-members}
+\Hypertarget{namespaceservices_1_1reminder__service_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceservices_1_1reminder__service_a20dc018bc58cc2d0f6860e588cccec23}\index{services.reminder\_service@{services.reminder\_service}!reminder\_worker@{reminder\_worker}}
+\index{reminder\_worker@{reminder\_worker}!services.reminder\_service@{services.reminder\_service}}
+\doxysubsubsection{\texorpdfstring{reminder\_worker()}{reminder\_worker()}}
+{\footnotesize\ttfamily \label{namespaceservices_1_1reminder__service_a20dc018bc58cc2d0f6860e588cccec23} 
+ None reminder\+\_\+worker (\begin{DoxyParamCaption}\item[{Bot}]{bot}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Background worker that regularly scans for and sends pending reminders.
+
+@param bot Active aiogram Bot instance used for sending messages.
+\end{DoxyVerb}
+ 
+
+\label{namespaceservices_1_1reminder__service_doc-var-members}
+\Hypertarget{namespaceservices_1_1reminder__service_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceservices_1_1reminder__service_af77ae8e87a4b0a70363ecaba6e3ad45c}\index{services.reminder\_service@{services.reminder\_service}!logger@{logger}}
+\index{logger@{logger}!services.reminder\_service@{services.reminder\_service}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily \label{namespaceservices_1_1reminder__service_af77ae8e87a4b0a70363ecaba6e3ad45c} 
+services.\+reminder\+\_\+service.\+logger = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\_)}
+

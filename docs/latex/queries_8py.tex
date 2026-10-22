@@ -1,0 +1,54 @@
+\doxysection{database/\+queries.py File Reference}
+\hypertarget{queries_8py}{}\label{queries_8py}\index{database/queries.py@{database/queries.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespacedatabase}{database}}
+\item 
+namespace \doxymbox{\hyperlink{namespacedatabase_1_1queries}{database.\+queries}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_aa57f5c3602b641e69d62bf4f82abc669}{database.\+queries.\+\_\+ensure\+\_\+default\+\_\+lists}} (aiosqlite.\+Connection db, int user\+\_\+id)
+\item 
+int \doxymbox{\hyperlink{namespacedatabase_1_1queries_a5c8aba739a918a58e1676f26cbada3a6}{database.\+queries.\+get\+\_\+or\+\_\+create\+\_\+user}} (int telegram\+\_\+id, str\texorpdfstring{$\vert$}{|}None username)
+\item 
+int\texorpdfstring{$\vert$}{|}None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a74a7f7f870f2e6b3b6fe9405122a843c}{database.\+queries.\+get\+\_\+list\+\_\+by\+\_\+name}} (int user\+\_\+id, str name)
+\item 
+dict\texorpdfstring{$\vert$}{|}None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a99f037413e547204d2c2ef1d3b79513b}{database.\+queries.\+get\+\_\+list\+\_\+by\+\_\+id}} (int user\+\_\+id, int list\+\_\+id)
+\item 
+tuple\+[int, bool] \doxymbox{\hyperlink{namespacedatabase_1_1queries_ad0dfe33ff6616a04003018f85d75b4cc}{database.\+queries.\+create\+\_\+list}} (int user\+\_\+id, str name)
+\item 
+list\+[dict] \doxymbox{\hyperlink{namespacedatabase_1_1queries_a9a2b8fc3653aebea30372bd9f36c3775}{database.\+queries.\+get\+\_\+lists}} (int user\+\_\+id, bool include\+\_\+notes=True)
+\item 
+list\+[dict] \doxymbox{\hyperlink{namespacedatabase_1_1queries_ac96ceb6a786193cb3a12b7501665e7f1}{database.\+queries.\+get\+\_\+reminder\+\_\+lists}} (int user\+\_\+id)
+\item 
+tuple\+[bool, str] \doxymbox{\hyperlink{namespacedatabase_1_1queries_a3e2e3e1c69a9007032898b854aead6c1}{database.\+queries.\+delete\+\_\+list\+\_\+if\+\_\+empty}} (int user\+\_\+id, int list\+\_\+id)
+\item 
+int \doxymbox{\hyperlink{namespacedatabase_1_1queries_abe2925b6d6607e26644c798dd32caaec}{database.\+queries.\+create\+\_\+item}} (int user\+\_\+id, int list\+\_\+id, str text, str item\+\_\+type, str priority, str\texorpdfstring{$\vert$}{|}None remind\+\_\+at=None)
+\item 
+list\+[dict] \doxymbox{\hyperlink{namespacedatabase_1_1queries_a750a0e71c806c51957df5b831f4b0f89}{database.\+queries.\+get\+\_\+items\+\_\+by\+\_\+type}} (int user\+\_\+id, str item\+\_\+type)
+\item 
+list\+[dict] \doxymbox{\hyperlink{namespacedatabase_1_1queries_ad2dddd1f2390315dde690e270062fad2}{database.\+queries.\+get\+\_\+items\+\_\+by\+\_\+list}} (int user\+\_\+id, int list\+\_\+id)
+\item 
+dict\texorpdfstring{$\vert$}{|}None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a0e746816bdba3d42bbcd6089a1d7550e}{database.\+queries.\+get\+\_\+item\+\_\+by\+\_\+id}} (int user\+\_\+id, int item\+\_\+id)
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a5871c0d102021cf1abad5f26af28e5b0}{database.\+queries.\+update\+\_\+item\+\_\+text}} (int user\+\_\+id, int item\+\_\+id, str new\+\_\+text)
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a50771489cf123f5cc0c52f2eb53fad32}{database.\+queries.\+update\+\_\+item\+\_\+priority}} (int user\+\_\+id, int item\+\_\+id, str new\+\_\+priority)
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a789287a341396cec307cfdee0c472b96}{database.\+queries.\+update\+\_\+item\+\_\+remind\+\_\+at}} (int user\+\_\+id, int item\+\_\+id, str new\+\_\+remind\+\_\+at)
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_aecf03aacafee848d78f517d84c70bb9d}{database.\+queries.\+delete\+\_\+item}} (int user\+\_\+id, int item\+\_\+id)
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a260ffef1b337e40c71f8d1a5ba1f1d2e}{database.\+queries.\+mark\+\_\+item\+\_\+completed}} (int user\+\_\+id, int item\+\_\+id)
+\item 
+bool \doxymbox{\hyperlink{namespacedatabase_1_1queries_a6b941a81ed2b82f73fd9fa5e39e42953}{database.\+queries.\+snooze\+\_\+reminder}} (int user\+\_\+id, int item\+\_\+id, str new\+\_\+remind\+\_\+at)
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a68823e903232c8894a258b67cf12a999}{database.\+queries.\+mark\+\_\+item\+\_\+status}} (int item\+\_\+id, str status)
+\item 
+list\+[dict] \doxymbox{\hyperlink{namespacedatabase_1_1queries_aee2c5f35659791be722ad1db78eba64f}{database.\+queries.\+get\+\_\+due\+\_\+reminders}} ()
+\item 
+dict\+[str, int] \doxymbox{\hyperlink{namespacedatabase_1_1queries_a6402ee0cf8fed96845b18d2978fa3e18}{database.\+queries.\+get\+\_\+stats}} (int user\+\_\+id)
+\end{DoxyCompactItemize}

@@ -1,0 +1,61 @@
+\doxysection{handlers.\+fallback Namespace Reference}
+\hypertarget{namespacehandlers_1_1fallback}{}\label{namespacehandlers_1_1fallback}\index{handlers.fallback@{handlers.fallback}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1fallback_aec0acf450b1616890bfea39980d3b07d}{unknown\+\_\+text\+\_\+message}} (Message message, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1fallback_a345490d9afd153b72586ee65b1eea417}{unknown\+\_\+content\+\_\+message}} (Message message, FSMContext state)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespacehandlers_1_1fallback_a70386d14d918897ff8c8223fd87e7238}{router}} = Router()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package handlers
+@brief Router for catching unhandled or unexpected user inputs.
+
+Provides fallback responses when a user inputs text or media that does not match
+the current state flow or expected commands.
+\end{DoxyVerb}
+ 
+
+\label{namespacehandlers_1_1fallback_doc-func-members}
+\Hypertarget{namespacehandlers_1_1fallback_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacehandlers_1_1fallback_a345490d9afd153b72586ee65b1eea417}\index{handlers.fallback@{handlers.fallback}!unknown\_content\_message@{unknown\_content\_message}}
+\index{unknown\_content\_message@{unknown\_content\_message}!handlers.fallback@{handlers.fallback}}
+\doxysubsubsection{\texorpdfstring{unknown\_content\_message()}{unknown\_content\_message()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1fallback_a345490d9afd153b72586ee65b1eea417} 
+ None unknown\+\_\+content\+\_\+message (\begin{DoxyParamCaption}\item[{Message}]{message}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Handles unsupported content types (e.g., photos, voice notes, stickers).
+
+@param message Incoming Telegram Message instance.
+@param state FSM context.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1fallback_aec0acf450b1616890bfea39980d3b07d}\index{handlers.fallback@{handlers.fallback}!unknown\_text\_message@{unknown\_text\_message}}
+\index{unknown\_text\_message@{unknown\_text\_message}!handlers.fallback@{handlers.fallback}}
+\doxysubsubsection{\texorpdfstring{unknown\_text\_message()}{unknown\_text\_message()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1fallback_aec0acf450b1616890bfea39980d3b07d} 
+ None unknown\+\_\+text\+\_\+message (\begin{DoxyParamCaption}\item[{Message}]{message}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Handles unknown or out-of-context text messages.
+
+@param message Incoming Telegram Message instance.
+@param state FSM context.
+\end{DoxyVerb}
+ 
+
+\label{namespacehandlers_1_1fallback_doc-var-members}
+\Hypertarget{namespacehandlers_1_1fallback_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacehandlers_1_1fallback_a70386d14d918897ff8c8223fd87e7238}\index{handlers.fallback@{handlers.fallback}!router@{router}}
+\index{router@{router}!handlers.fallback@{handlers.fallback}}
+\doxysubsubsection{\texorpdfstring{router}{router}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1fallback_a70386d14d918897ff8c8223fd87e7238} 
+handlers.\+fallback.\+router = Router()}
+

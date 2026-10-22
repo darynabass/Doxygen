@@ -1,0 +1,151 @@
+\chapter{Smart Noter Bot }
+\hypertarget{index}{}\label{index}\index{Smart Noter Bot@{Smart Noter Bot}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+
+
+Smart Noter Bot is a Telegram bot for managing personal notes, reminders, and custom lists. It also provides activity statistics and sends scheduled reminders in the background.\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Features}{Features}}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Create and manage notes
+\item Create reminders and choose their priority
+\item Create and view custom lists
+\item Edit item text, priority, and reminder schedule
+\item Mark reminders as completed
+\item View user activity statistics
+\item Send scheduled reminders in the background
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Tech Stack}{Tech Stack}}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item {\bfseries{Python 3.\+10+}}
+\item {\bfseries{aiogram 3.\+x}} — asynchronous framework for the Telegram Bot API
+\item {\bfseries{aiosqlite}} — asynchronous interface for SQLite
+\item {\bfseries{python-\/dotenv}} — loads environment variables from a {\ttfamily .env} file
+\item {\bfseries{SQLite}} — database
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Requirements}{Requirements}}\label{index_autotoc_md3}
+Before running the bot, make sure you have:
+
+
+\begin{DoxyItemize}
+\item Python 3.\+10 or newer
+\item A Telegram bot token from \href{https://t.me/BotFather}{\texttt{@Bot\+Father}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Installation and Setup}{Installation and Setup}}\label{index_autotoc_md4}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{1. Clone or download the project}{1. Clone or download the project}}\label{index_autotoc_md5}
+Open a terminal in the project directory.\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{2. Create a virtual environment}{2. Create a virtual environment}}\label{index_autotoc_md6}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python\ -\/m\ venv\ .venv}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{3. Activate the virtual environment}{3. Activate the virtual environment}}\label{index_autotoc_md7}
+{\bfseries{Windows — Power\+Shell}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.\(\backslash\)\(\backslash\).venv\(\backslash\)\(\backslash\)Scripts\(\backslash\)\(\backslash\)Activate.ps1}
+
+\end{DoxyCode}
+
+
+{\bfseries{Windows — Command Prompt}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.venv\(\backslash\)\(\backslash\)Scripts\(\backslash\)\(\backslash\)activate.bat}
+
+\end{DoxyCode}
+
+
+{\bfseries{Linux / mac\+OS}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source\ .venv/bin/activate}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{4. Install dependencies}{4. Install dependencies}}\label{index_autotoc_md8}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip\ install\ -\/r\ requirements.txt}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{5. Configure the bot token}{5. Configure the bot token}}\label{index_autotoc_md9}
+Create a {\ttfamily .env} file in the project root and add your Telegram bot token:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{BOT\(\backslash\)\_TOKEN=your\(\backslash\)\_bot\(\backslash\)\_token\(\backslash\)\_here}
+
+\end{DoxyCode}
+
+
+Replace {\ttfamily your\textbackslash{}\+\_\+bot\textbackslash{}\+\_\+token\textbackslash{}\+\_\+here} with the token provided by Bot\+Father. Keep your real {\ttfamily .env} file private and do not commit it to a public repository.\hypertarget{index_autotoc_md10}{}\doxysubsection{\texorpdfstring{6. Run the bot}{6. Run the bot}}\label{index_autotoc_md10}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python\ main.py}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md11}{}\doxysection{\texorpdfstring{Quick Start on Windows}{Quick Start on Windows}}\label{index_autotoc_md11}
+You can use the included batch files instead:
+
+
+\begin{DoxyEnumerate}
+\item Run {\ttfamily setup.\+bat} to prepare the environment.
+\item Run {\ttfamily run.\+bat} to start the bot.
+\end{DoxyEnumerate}
+
+If either script does not work in your environment, follow the manual setup instructions above.\hypertarget{index_autotoc_md12}{}\doxysection{\texorpdfstring{Project Structure}{Project Structure}}\label{index_autotoc_md12}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SMART\(\backslash\)\_NOTER\(\backslash\)\_BOT/}
+\DoxyCodeLine{├──\ main.py\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Application\ entry\ point}
+\DoxyCodeLine{├──\ config.py\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Configuration}
+\DoxyCodeLine{├──\ requirements.txt\ \ \ \ \ \ \ \ \ \#\ Python\ dependencies}
+\DoxyCodeLine{├──\ .env\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Local\ environment\ variables\ (create\ locally)}
+\DoxyCodeLine{├──\ .gitignore}
+\DoxyCodeLine{├──\ run.bat\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Windows\ launch\ script}
+\DoxyCodeLine{├──\ setup.bat\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Windows\ setup\ script}
+\DoxyCodeLine{├──\ database/}
+\DoxyCodeLine{│\ \ \ ├──\ db.py\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Database\ connection\ and\ setup}
+\DoxyCodeLine{│\ \ \ └──\ queries.py\ \ \ \ \ \ \ \ \ \ \ \ \#\ Database\ queries}
+\DoxyCodeLine{├──\ handlers/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Telegram\ command\ and\ interaction\ handlers}
+\DoxyCodeLine{│\ \ \ ├──\ start.py}
+\DoxyCodeLine{│\ \ \ ├──\ fallback.py}
+\DoxyCodeLine{│\ \ \ ├──\ add.py}
+\DoxyCodeLine{│\ \ \ ├──\ lists.py}
+\DoxyCodeLine{│\ \ \ ├──\ items.py}
+\DoxyCodeLine{│\ \ \ ├──\ notes.py}
+\DoxyCodeLine{│\ \ \ ├──\ reminders.py}
+\DoxyCodeLine{│\ \ \ └──\ stats.py}
+\DoxyCodeLine{├──\ keyboards/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Telegram\ keyboard\ layouts}
+\DoxyCodeLine{│\ \ \ ├──\ pagination.py}
+\DoxyCodeLine{│\ \ \ ├──\ main\(\backslash\)\_menu.py}
+\DoxyCodeLine{│\ \ \ ├──\ add\(\backslash\)\_keyboards.py}
+\DoxyCodeLine{│\ \ \ ├──\ list\(\backslash\)\_keyboards.py}
+\DoxyCodeLine{│\ \ \ ├──\ time\(\backslash\)\_keyboards.py}
+\DoxyCodeLine{│\ \ \ └──\ item\(\backslash\)\_keyboards.py}
+\DoxyCodeLine{├──\ services/}
+\DoxyCodeLine{│\ \ \ └──\ reminder\(\backslash\)\_service.py\ \ \#\ Scheduled\ reminder\ service}
+\DoxyCodeLine{└──\ utils/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Shared\ utilities\ and\ formatting\ helpers}
+\DoxyCodeLine{\ \ \ \ ├──\ text\(\backslash\)\_utils.py}
+\DoxyCodeLine{\ \ \ \ ├──\ constants.py}
+\DoxyCodeLine{\ \ \ \ ├──\ priority\(\backslash\)\_utils.py}
+\DoxyCodeLine{\ \ \ \ ├──\ message\(\backslash\)\_utils.py}
+\DoxyCodeLine{\ \ \ \ ├──\ formatters.py}
+\DoxyCodeLine{\ \ \ \ └──\ datetime\(\backslash\)\_utils.py}
+
+\end{DoxyCode}
+
+
+The SQLite database file is created or used by the application according to its database configuration. It is not listed above because the local database is runtime data rather than source code.\hypertarget{index_autotoc_md13}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{index_autotoc_md13}
+The source code uses Doxygen-\/style documentation comments. If the project includes a {\ttfamily Doxyfile} and Doxygen is installed, generate HTML documentation with:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{doxygen\ Doxyfile}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md14}{}\doxysection{\texorpdfstring{Author}{Author}}\label{index_autotoc_md14}
+{\bfseries{Daryna Bass}}
+
+Developed as part of a diploma thesis. 

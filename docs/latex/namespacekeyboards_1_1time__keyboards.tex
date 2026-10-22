@@ -1,0 +1,43 @@
+\doxysection{keyboards.\+time\+\_\+keyboards Namespace Reference}
+\hypertarget{namespacekeyboards_1_1time__keyboards}{}\label{namespacekeyboards_1_1time__keyboards}\index{keyboards.time\_keyboards@{keyboards.time\_keyboards}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Inline\+Keyboard\+Markup \doxymbox{\hyperlink{namespacekeyboards_1_1time__keyboards_ae977ac85780b4e3cfabd3e107a094fc5}{quick\+\_\+time\+\_\+keyboard}} (str prefix)
+\item 
+Inline\+Keyboard\+Markup \doxymbox{\hyperlink{namespacekeyboards_1_1time__keyboards_adfabd2bd674a924eb25e63d1f160819b}{reminder\+\_\+notification\+\_\+keyboard}} (int item\+\_\+id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package keyboards
+@brief Module for inline keyboards handling time settings and reminder notification controls.
+\end{DoxyVerb}
+ 
+
+\label{namespacekeyboards_1_1time__keyboards_doc-func-members}
+\Hypertarget{namespacekeyboards_1_1time__keyboards_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacekeyboards_1_1time__keyboards_ae977ac85780b4e3cfabd3e107a094fc5}\index{keyboards.time\_keyboards@{keyboards.time\_keyboards}!quick\_time\_keyboard@{quick\_time\_keyboard}}
+\index{quick\_time\_keyboard@{quick\_time\_keyboard}!keyboards.time\_keyboards@{keyboards.time\_keyboards}}
+\doxysubsubsection{\texorpdfstring{quick\_time\_keyboard()}{quick\_time\_keyboard()}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1time__keyboards_ae977ac85780b4e3cfabd3e107a094fc5} 
+ Inline\+Keyboard\+Markup quick\+\_\+time\+\_\+keyboard (\begin{DoxyParamCaption}\item[{str}]{prefix}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Creates a keyboard offering pre-defined relative time slots.
+
+@param prefix Callback prefix string to differentiate caller routing.
+@return Inline keyboard containing time presets.
+\end{DoxyVerb}
+ \Hypertarget{namespacekeyboards_1_1time__keyboards_adfabd2bd674a924eb25e63d1f160819b}\index{keyboards.time\_keyboards@{keyboards.time\_keyboards}!reminder\_notification\_keyboard@{reminder\_notification\_keyboard}}
+\index{reminder\_notification\_keyboard@{reminder\_notification\_keyboard}!keyboards.time\_keyboards@{keyboards.time\_keyboards}}
+\doxysubsubsection{\texorpdfstring{reminder\_notification\_keyboard()}{reminder\_notification\_keyboard()}}
+{\footnotesize\ttfamily \label{namespacekeyboards_1_1time__keyboards_adfabd2bd674a924eb25e63d1f160819b} 
+ Inline\+Keyboard\+Markup reminder\+\_\+notification\+\_\+keyboard (\begin{DoxyParamCaption}\item[{int}]{item\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Creates an action keyboard attached to sent reminder notifications.
+
+@param item_id Identifier of target reminder item.
+@return Inline keyboard offering Done and Snooze controls.
+\end{DoxyVerb}
+ 

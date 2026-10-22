@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['reminder_5fcheck_5finterval_0',['REMINDER_CHECK_INTERVAL',['../namespaceutils_1_1constants.html#aeea35cb41b1a0aa735c322c5f745ac2e',1,'utils::constants']]],
+  ['router_1',['router',['../namespacehandlers_1_1add.html#a17f725edc7b275d0c713f0222b84f271',1,'handlers.add.router'],['../namespacehandlers_1_1fallback.html#a70386d14d918897ff8c8223fd87e7238',1,'handlers.fallback.router'],['../namespacehandlers_1_1items.html#aca695f88e491f65ffe1964ab317b841c',1,'handlers.items.router'],['../namespacehandlers_1_1lists.html#a1ca3b1c39aaba1d80fb9422dde81a248',1,'handlers.lists.router'],['../namespacehandlers_1_1notes.html#a8af2cc9447c1dd8b5365f7862d08514c',1,'handlers.notes.router'],['../namespacehandlers_1_1reminders.html#a1d8d851af6786ccfcd8fd1ae40009a22',1,'handlers.reminders.router'],['../namespacehandlers_1_1start.html#ae8d708ceadb0a514ccc8e02ebe5498eb',1,'handlers.start.router'],['../namespacehandlers_1_1stats.html#a7150370859c1406aca444b8a59617cdc',1,'handlers.stats.router']]]
+];

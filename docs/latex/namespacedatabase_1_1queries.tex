@@ -1,0 +1,318 @@
+\doxysection{database.\+queries Namespace Reference}
+\hypertarget{namespacedatabase_1_1queries}{}\label{namespacedatabase_1_1queries}\index{database.queries@{database.queries}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_aa57f5c3602b641e69d62bf4f82abc669}{\+\_\+ensure\+\_\+default\+\_\+lists}} (aiosqlite.\+Connection db, int user\+\_\+id)
+\item 
+int \doxymbox{\hyperlink{namespacedatabase_1_1queries_a5c8aba739a918a58e1676f26cbada3a6}{get\+\_\+or\+\_\+create\+\_\+user}} (int telegram\+\_\+id, str\texorpdfstring{$\vert$}{|}None username)
+\item 
+int\texorpdfstring{$\vert$}{|}None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a74a7f7f870f2e6b3b6fe9405122a843c}{get\+\_\+list\+\_\+by\+\_\+name}} (int user\+\_\+id, str name)
+\item 
+dict\texorpdfstring{$\vert$}{|}None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a99f037413e547204d2c2ef1d3b79513b}{get\+\_\+list\+\_\+by\+\_\+id}} (int user\+\_\+id, int list\+\_\+id)
+\item 
+tuple\+[int, bool] \doxymbox{\hyperlink{namespacedatabase_1_1queries_ad0dfe33ff6616a04003018f85d75b4cc}{create\+\_\+list}} (int user\+\_\+id, str name)
+\item 
+list\+[dict] \doxymbox{\hyperlink{namespacedatabase_1_1queries_a9a2b8fc3653aebea30372bd9f36c3775}{get\+\_\+lists}} (int user\+\_\+id, bool include\+\_\+notes=True)
+\item 
+list\+[dict] \doxymbox{\hyperlink{namespacedatabase_1_1queries_ac96ceb6a786193cb3a12b7501665e7f1}{get\+\_\+reminder\+\_\+lists}} (int user\+\_\+id)
+\item 
+tuple\+[bool, str] \doxymbox{\hyperlink{namespacedatabase_1_1queries_a3e2e3e1c69a9007032898b854aead6c1}{delete\+\_\+list\+\_\+if\+\_\+empty}} (int user\+\_\+id, int list\+\_\+id)
+\item 
+int \doxymbox{\hyperlink{namespacedatabase_1_1queries_abe2925b6d6607e26644c798dd32caaec}{create\+\_\+item}} (int user\+\_\+id, int list\+\_\+id, str text, str item\+\_\+type, str priority, str\texorpdfstring{$\vert$}{|}None remind\+\_\+at=None)
+\item 
+list\+[dict] \doxymbox{\hyperlink{namespacedatabase_1_1queries_a750a0e71c806c51957df5b831f4b0f89}{get\+\_\+items\+\_\+by\+\_\+type}} (int user\+\_\+id, str item\+\_\+type)
+\item 
+list\+[dict] \doxymbox{\hyperlink{namespacedatabase_1_1queries_ad2dddd1f2390315dde690e270062fad2}{get\+\_\+items\+\_\+by\+\_\+list}} (int user\+\_\+id, int list\+\_\+id)
+\item 
+dict\texorpdfstring{$\vert$}{|}None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a0e746816bdba3d42bbcd6089a1d7550e}{get\+\_\+item\+\_\+by\+\_\+id}} (int user\+\_\+id, int item\+\_\+id)
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a5871c0d102021cf1abad5f26af28e5b0}{update\+\_\+item\+\_\+text}} (int user\+\_\+id, int item\+\_\+id, str new\+\_\+text)
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a50771489cf123f5cc0c52f2eb53fad32}{update\+\_\+item\+\_\+priority}} (int user\+\_\+id, int item\+\_\+id, str new\+\_\+priority)
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a789287a341396cec307cfdee0c472b96}{update\+\_\+item\+\_\+remind\+\_\+at}} (int user\+\_\+id, int item\+\_\+id, str new\+\_\+remind\+\_\+at)
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_aecf03aacafee848d78f517d84c70bb9d}{delete\+\_\+item}} (int user\+\_\+id, int item\+\_\+id)
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a260ffef1b337e40c71f8d1a5ba1f1d2e}{mark\+\_\+item\+\_\+completed}} (int user\+\_\+id, int item\+\_\+id)
+\item 
+bool \doxymbox{\hyperlink{namespacedatabase_1_1queries_a6b941a81ed2b82f73fd9fa5e39e42953}{snooze\+\_\+reminder}} (int user\+\_\+id, int item\+\_\+id, str new\+\_\+remind\+\_\+at)
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1queries_a68823e903232c8894a258b67cf12a999}{mark\+\_\+item\+\_\+status}} (int item\+\_\+id, str status)
+\item 
+list\+[dict] \doxymbox{\hyperlink{namespacedatabase_1_1queries_aee2c5f35659791be722ad1db78eba64f}{get\+\_\+due\+\_\+reminders}} ()
+\item 
+dict\+[str, int] \doxymbox{\hyperlink{namespacedatabase_1_1queries_a6402ee0cf8fed96845b18d2978fa3e18}{get\+\_\+stats}} (int user\+\_\+id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package database
+@brief Database queries module containing all asynchronous CRUD operations for SQLite.
+
+Provides helper functions for managing users, lists, notes, reminders, status updates,
+and generating user activity statistics.
+\end{DoxyVerb}
+ 
+
+\label{namespacedatabase_1_1queries_doc-func-members}
+\Hypertarget{namespacedatabase_1_1queries_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacedatabase_1_1queries_aa57f5c3602b641e69d62bf4f82abc669}\index{database.queries@{database.queries}!\_ensure\_default\_lists@{\_ensure\_default\_lists}}
+\index{\_ensure\_default\_lists@{\_ensure\_default\_lists}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{\_ensure\_default\_lists()}{\_ensure\_default\_lists()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_aa57f5c3602b641e69d62bf4f82abc669} 
+ None \+\_\+ensure\+\_\+default\+\_\+lists (\begin{DoxyParamCaption}\item[{aiosqlite.\+Connection}]{db}{, }\item[{int}]{user\+\_\+id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}@brief Ensures that mandatory default lists exist for a user.
+
+Creates 'Notes' and 'General' lists if they do not already exist for the given user.
+
+@param db Open aiosqlite connection instance.
+@param user_id The internal user ID in the database.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_abe2925b6d6607e26644c798dd32caaec}\index{database.queries@{database.queries}!create\_item@{create\_item}}
+\index{create\_item@{create\_item}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{create\_item()}{create\_item()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_abe2925b6d6607e26644c798dd32caaec} 
+ int create\+\_\+item (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{int}]{list\+\_\+id}{, }\item[{str}]{text}{, }\item[{str}]{item\+\_\+type}{, }\item[{str}]{priority}{, }\item[{str \texorpdfstring{$\vert$}{|} None }]{remind\+\_\+at}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Inserts a new note or reminder item into the database.
+
+@param user_id Internal database ID of the user.
+@param list_id Database ID of the parent list.
+@param text Description/text content of the item.
+@param item_type Type of item ('reminder' or 'note').
+@param priority Priority level string ('none', 'low', 'medium', 'high').
+@param remind_at ISO formatted datetime string for reminders, or None for notes.
+@return ID of the created item.
+@exception ValueError If an invalid item_type is provided.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_ad0dfe33ff6616a04003018f85d75b4cc}\index{database.queries@{database.queries}!create\_list@{create\_list}}
+\index{create\_list@{create\_list}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{create\_list()}{create\_list()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_ad0dfe33ff6616a04003018f85d75b4cc} 
+ tuple\+[int, bool]\+ create\+\_\+list (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{str}]{name}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Creates a new list for a user after verifying name uniqueness.
+
+@param user_id Internal database ID of the user.
+@param name Target list name.
+@return Tuple of (list_id, is_created), where is_created indicates if a new list was inserted.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_aecf03aacafee848d78f517d84c70bb9d}\index{database.queries@{database.queries}!delete\_item@{delete\_item}}
+\index{delete\_item@{delete\_item}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{delete\_item()}{delete\_item()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_aecf03aacafee848d78f517d84c70bb9d} 
+ None delete\+\_\+item (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{int}]{item\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Deletes an item from the database.
+
+@param user_id Internal database ID of the user.
+@param item_id Database ID of the item.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a3e2e3e1c69a9007032898b854aead6c1}\index{database.queries@{database.queries}!delete\_list\_if\_empty@{delete\_list\_if\_empty}}
+\index{delete\_list\_if\_empty@{delete\_list\_if\_empty}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{delete\_list\_if\_empty()}{delete\_list\_if\_empty()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a3e2e3e1c69a9007032898b854aead6c1} 
+ tuple\+[bool, str]\+ delete\+\_\+list\+\_\+if\+\_\+empty (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{int}]{list\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Deletes a list if it contains no items and is not a protected system list.
+
+@param user_id Internal database ID of the user.
+@param list_id Database ID of the list to delete.
+@return Tuple of (success_status, descriptive_message).
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_aee2c5f35659791be722ad1db78eba64f}\index{database.queries@{database.queries}!get\_due\_reminders@{get\_due\_reminders}}
+\index{get\_due\_reminders@{get\_due\_reminders}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{get\_due\_reminders()}{get\_due\_reminders()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_aee2c5f35659791be722ad1db78eba64f} 
+ list\+[dict]\+ get\+\_\+due\+\_\+reminders (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Queries active reminders whose scheduled time is past or present.
+
+@return List of due reminder dictionaries containing telegram_id and item fields.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a0e746816bdba3d42bbcd6089a1d7550e}\index{database.queries@{database.queries}!get\_item\_by\_id@{get\_item\_by\_id}}
+\index{get\_item\_by\_id@{get\_item\_by\_id}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{get\_item\_by\_id()}{get\_item\_by\_id()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a0e746816bdba3d42bbcd6089a1d7550e} 
+ dict \texorpdfstring{$\vert$}{|} None get\+\_\+item\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{int}]{item\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Retrieves item details along with its list name by item ID.
+
+@param user_id Internal database ID of the user.
+@param item_id Database ID of the item.
+@return Item dictionary if found, otherwise None.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_ad2dddd1f2390315dde690e270062fad2}\index{database.queries@{database.queries}!get\_items\_by\_list@{get\_items\_by\_list}}
+\index{get\_items\_by\_list@{get\_items\_by\_list}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{get\_items\_by\_list()}{get\_items\_by\_list()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_ad2dddd1f2390315dde690e270062fad2} 
+ list\+[dict]\+ get\+\_\+items\+\_\+by\+\_\+list (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{int}]{list\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Retrieves all items associated with a specific list.
+
+@param user_id Internal database ID of the user.
+@param list_id ID of the target list.
+@return List of item dictionaries ordered by creation date.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a750a0e71c806c51957df5b831f4b0f89}\index{database.queries@{database.queries}!get\_items\_by\_type@{get\_items\_by\_type}}
+\index{get\_items\_by\_type@{get\_items\_by\_type}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{get\_items\_by\_type()}{get\_items\_by\_type()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a750a0e71c806c51957df5b831f4b0f89} 
+ list\+[dict]\+ get\+\_\+items\+\_\+by\+\_\+type (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{str}]{item\+\_\+type}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Retrieves items filtered by type ('reminder' or 'note').
+
+@param user_id Internal database ID of the user.
+@param item_type Type string ('reminder' or 'note').
+@return List of matching item dictionaries.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a99f037413e547204d2c2ef1d3b79513b}\index{database.queries@{database.queries}!get\_list\_by\_id@{get\_list\_by\_id}}
+\index{get\_list\_by\_id@{get\_list\_by\_id}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{get\_list\_by\_id()}{get\_list\_by\_id()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a99f037413e547204d2c2ef1d3b79513b} 
+ dict \texorpdfstring{$\vert$}{|} None get\+\_\+list\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{int}]{list\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Retrieves list details by list ID and user ID.
+
+@param user_id Internal database ID of the user.
+@param list_id Database ID of the list.
+@return Dictionary containing list fields ('id', 'name') if found, otherwise None.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a74a7f7f870f2e6b3b6fe9405122a843c}\index{database.queries@{database.queries}!get\_list\_by\_name@{get\_list\_by\_name}}
+\index{get\_list\_by\_name@{get\_list\_by\_name}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{get\_list\_by\_name()}{get\_list\_by\_name()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a74a7f7f870f2e6b3b6fe9405122a843c} 
+ int \texorpdfstring{$\vert$}{|} None get\+\_\+list\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{str}]{name}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Finds a user's list ID by its exact name.
+
+@param user_id Internal database ID of the user.
+@param name Exact name of the list to search for.
+@return List ID if found, otherwise None.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a9a2b8fc3653aebea30372bd9f36c3775}\index{database.queries@{database.queries}!get\_lists@{get\_lists}}
+\index{get\_lists@{get\_lists}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{get\_lists()}{get\_lists()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a9a2b8fc3653aebea30372bd9f36c3775} 
+ list\+[dict]\+ get\+\_\+lists (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{bool }]{include\+\_\+notes}{ = {\ttfamily True}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Fetches all lists owned by a user along with their total item count.
+
+@param user_id Internal database ID of the user.
+@param include_notes Whether to include the default system 'Notes' list.
+@return List of dictionaries containing list details and item counts.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a5c8aba739a918a58e1676f26cbada3a6}\index{database.queries@{database.queries}!get\_or\_create\_user@{get\_or\_create\_user}}
+\index{get\_or\_create\_user@{get\_or\_create\_user}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{get\_or\_create\_user()}{get\_or\_create\_user()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a5c8aba739a918a58e1676f26cbada3a6} 
+ int get\+\_\+or\+\_\+create\+\_\+user (\begin{DoxyParamCaption}\item[{int}]{telegram\+\_\+id}{, }\item[{str \texorpdfstring{$\vert$}{|} None}]{username}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Finds an existing user by Telegram ID or creates a new database record.
+
+Also ensures that default lists are populated for new or returning users.
+
+@param telegram_id Unique Telegram ID of the user.
+@param username Telegram username string or None.
+@return Internal primary key ID of the user in the database.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_ac96ceb6a786193cb3a12b7501665e7f1}\index{database.queries@{database.queries}!get\_reminder\_lists@{get\_reminder\_lists}}
+\index{get\_reminder\_lists@{get\_reminder\_lists}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{get\_reminder\_lists()}{get\_reminder\_lists()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_ac96ceb6a786193cb3a12b7501665e7f1} 
+ list\+[dict]\+ get\+\_\+reminder\+\_\+lists (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Retrieves user lists available for assigning reminders.
+
+Ensures that at least a 'General' list exists if no other lists are found.
+
+@param user_id Internal database ID of the user.
+@return List of custom reminder list dictionaries.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a6402ee0cf8fed96845b18d2978fa3e18}\index{database.queries@{database.queries}!get\_stats@{get\_stats}}
+\index{get\_stats@{get\_stats}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{get\_stats()}{get\_stats()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a6402ee0cf8fed96845b18d2978fa3e18} 
+ dict\+[str, int]\+ get\+\_\+stats (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Aggregates comprehensive user metrics and statistics.
+
+@param user_id Internal database ID of the user.
+@return Dictionary containing counts for notes, reminders, status splits, and lists.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a260ffef1b337e40c71f8d1a5ba1f1d2e}\index{database.queries@{database.queries}!mark\_item\_completed@{mark\_item\_completed}}
+\index{mark\_item\_completed@{mark\_item\_completed}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{mark\_item\_completed()}{mark\_item\_completed()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a260ffef1b337e40c71f8d1a5ba1f1d2e} 
+ None mark\+\_\+item\+\_\+completed (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{int}]{item\+\_\+id}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Marks an active or notified reminder as completed with current timestamp.
+
+@param user_id Internal database ID of the user.
+@param item_id Database ID of the reminder.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a68823e903232c8894a258b67cf12a999}\index{database.queries@{database.queries}!mark\_item\_status@{mark\_item\_status}}
+\index{mark\_item\_status@{mark\_item\_status}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{mark\_item\_status()}{mark\_item\_status()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a68823e903232c8894a258b67cf12a999} 
+ None mark\+\_\+item\+\_\+status (\begin{DoxyParamCaption}\item[{int}]{item\+\_\+id}{, }\item[{str}]{status}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Updates the status of a reminder item directly by item ID.
+
+@param item_id Database ID of the reminder.
+@param status Target status value (e.g., STATUS_NOTIFIED).
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a6b941a81ed2b82f73fd9fa5e39e42953}\index{database.queries@{database.queries}!snooze\_reminder@{snooze\_reminder}}
+\index{snooze\_reminder@{snooze\_reminder}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{snooze\_reminder()}{snooze\_reminder()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a6b941a81ed2b82f73fd9fa5e39e42953} 
+ bool snooze\+\_\+reminder (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{int}]{item\+\_\+id}{, }\item[{str}]{new\+\_\+remind\+\_\+at}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Postpones an existing reminder to a new time and sets status back to active.
+
+@param user_id Internal database ID of the user.
+@param item_id Database ID of the reminder.
+@param new_remind_at New reminder datetime formatted string.
+@return True if a row was updated, False otherwise.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a50771489cf123f5cc0c52f2eb53fad32}\index{database.queries@{database.queries}!update\_item\_priority@{update\_item\_priority}}
+\index{update\_item\_priority@{update\_item\_priority}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{update\_item\_priority()}{update\_item\_priority()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a50771489cf123f5cc0c52f2eb53fad32} 
+ None update\+\_\+item\+\_\+priority (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{int}]{item\+\_\+id}{, }\item[{str}]{new\+\_\+priority}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Updates the priority level of an uncompleted item.
+
+@param user_id Internal database ID of the user.
+@param item_id Database ID of the item.
+@param new_priority New priority string value.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a789287a341396cec307cfdee0c472b96}\index{database.queries@{database.queries}!update\_item\_remind\_at@{update\_item\_remind\_at}}
+\index{update\_item\_remind\_at@{update\_item\_remind\_at}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{update\_item\_remind\_at()}{update\_item\_remind\_at()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a789287a341396cec307cfdee0c472b96} 
+ None update\+\_\+item\+\_\+remind\+\_\+at (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{int}]{item\+\_\+id}{, }\item[{str}]{new\+\_\+remind\+\_\+at}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Updates the scheduled reminder time and resets status to active.
+
+@param user_id Internal database ID of the user.
+@param item_id Database ID of the item.
+@param new_remind_at New reminder datetime formatted string.
+\end{DoxyVerb}
+ \Hypertarget{namespacedatabase_1_1queries_a5871c0d102021cf1abad5f26af28e5b0}\index{database.queries@{database.queries}!update\_item\_text@{update\_item\_text}}
+\index{update\_item\_text@{update\_item\_text}!database.queries@{database.queries}}
+\doxysubsubsection{\texorpdfstring{update\_item\_text()}{update\_item\_text()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1queries_a5871c0d102021cf1abad5f26af28e5b0} 
+ None update\+\_\+item\+\_\+text (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{int}]{item\+\_\+id}{, }\item[{str}]{new\+\_\+text}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Updates the text content of an existing item.
+
+@param user_id Internal database ID of the user.
+@param item_id Database ID of the item to update.
+@param new_text New text value.
+\end{DoxyVerb}
+ 

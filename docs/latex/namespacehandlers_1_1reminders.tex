@@ -1,0 +1,97 @@
+\doxysection{handlers.\+reminders Namespace Reference}
+\hypertarget{namespacehandlers_1_1reminders}{}\label{namespacehandlers_1_1reminders}\index{handlers.reminders@{handlers.reminders}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1reminders_a61741450d3f8d6f303acf4095739f7f3}{reminders\+\_\+start}} (Message message, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1reminders_a966320e62624e977bcfb8db3b7406469}{reminders\+\_\+page}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1reminders_a4b33b1e07ae43702ca47a483b57965f8}{reminders\+\_\+page\+\_\+new}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1reminders_aea475104ce627ba5ceaa07a30ee98eaa}{reminder\+\_\+done}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1reminders_a07b3fab1739a646e88a44aafa4b38d5e}{reminder\+\_\+snooze}} (Callback\+Query callback, FSMContext state)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespacehandlers_1_1reminders_a1d8d851af6786ccfcd8fd1ae40009a22}{router}} = Router()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package handlers
+@brief Module for managing user reminders, including pagination, completion, and snoozing.
+\end{DoxyVerb}
+ 
+
+\label{namespacehandlers_1_1reminders_doc-func-members}
+\Hypertarget{namespacehandlers_1_1reminders_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacehandlers_1_1reminders_aea475104ce627ba5ceaa07a30ee98eaa}\index{handlers.reminders@{handlers.reminders}!reminder\_done@{reminder\_done}}
+\index{reminder\_done@{reminder\_done}!handlers.reminders@{handlers.reminders}}
+\doxysubsubsection{\texorpdfstring{reminder\_done()}{reminder\_done()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1reminders_aea475104ce627ba5ceaa07a30ee98eaa} 
+ None reminder\+\_\+done (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Marks a reminder as completed from a notification callback.
+
+@param callback Telegram callback query object.
+@param state Finite State Machine context.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1reminders_a07b3fab1739a646e88a44aafa4b38d5e}\index{handlers.reminders@{handlers.reminders}!reminder\_snooze@{reminder\_snooze}}
+\index{reminder\_snooze@{reminder\_snooze}!handlers.reminders@{handlers.reminders}}
+\doxysubsubsection{\texorpdfstring{reminder\_snooze()}{reminder\_snooze()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1reminders_a07b3fab1739a646e88a44aafa4b38d5e} 
+ None reminder\+\_\+snooze (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Snoozes a reminder for a designated duration in minutes.
+
+@param callback Telegram callback query object.
+@param state Finite State Machine context.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1reminders_a966320e62624e977bcfb8db3b7406469}\index{handlers.reminders@{handlers.reminders}!reminders\_page@{reminders\_page}}
+\index{reminders\_page@{reminders\_page}!handlers.reminders@{handlers.reminders}}
+\doxysubsubsection{\texorpdfstring{reminders\_page()}{reminders\_page()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1reminders_a966320e62624e977bcfb8db3b7406469} 
+ None reminders\+\_\+page (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Handles pagination within the reminders list by editing the current message.
+
+@param callback Telegram callback query object.
+@param state Finite State Machine context.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1reminders_a4b33b1e07ae43702ca47a483b57965f8}\index{handlers.reminders@{handlers.reminders}!reminders\_page\_new@{reminders\_page\_new}}
+\index{reminders\_page\_new@{reminders\_page\_new}!handlers.reminders@{handlers.reminders}}
+\doxysubsubsection{\texorpdfstring{reminders\_page\_new()}{reminders\_page\_new()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1reminders_a4b33b1e07ae43702ca47a483b57965f8} 
+ None reminders\+\_\+page\+\_\+new (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Handles returning to the reminders list by sending a new message.
+
+@param callback Telegram callback query object.
+@param state Finite State Machine context.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1reminders_a61741450d3f8d6f303acf4095739f7f3}\index{handlers.reminders@{handlers.reminders}!reminders\_start@{reminders\_start}}
+\index{reminders\_start@{reminders\_start}!handlers.reminders@{handlers.reminders}}
+\doxysubsubsection{\texorpdfstring{reminders\_start()}{reminders\_start()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1reminders_a61741450d3f8d6f303acf4095739f7f3} 
+ None reminders\+\_\+start (\begin{DoxyParamCaption}\item[{Message}]{message}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Starts the reminders view from the main menu or via command.
+
+@param message Telegram message object from user.
+@param state Finite State Machine context.
+\end{DoxyVerb}
+ 
+
+\label{namespacehandlers_1_1reminders_doc-var-members}
+\Hypertarget{namespacehandlers_1_1reminders_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacehandlers_1_1reminders_a1d8d851af6786ccfcd8fd1ae40009a22}\index{handlers.reminders@{handlers.reminders}!router@{router}}
+\index{router@{router}!handlers.reminders@{handlers.reminders}}
+\doxysubsubsection{\texorpdfstring{router}{router}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1reminders_a1d8d851af6786ccfcd8fd1ae40009a22} 
+handlers.\+reminders.\+router = Router()}
+

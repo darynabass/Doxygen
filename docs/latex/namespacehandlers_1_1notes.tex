@@ -1,0 +1,71 @@
+\doxysection{handlers.\+notes Namespace Reference}
+\hypertarget{namespacehandlers_1_1notes}{}\label{namespacehandlers_1_1notes}\index{handlers.notes@{handlers.notes}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1notes_a58b065c787c1fd0917d42b530fb72a82}{notes\+\_\+start}} (Message message, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1notes_af32239a1ae7ea9f810ab0cbc05ebcb51}{notes\+\_\+page}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1notes_a5d57a76f99d7e2dbd8f6f6617ade3994}{notes\+\_\+page\+\_\+new}} (Callback\+Query callback, FSMContext state)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespacehandlers_1_1notes_a8af2cc9447c1dd8b5365f7862d08514c}{router}} = Router()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package handlers
+@brief Telegram bot router handling viewing and navigation for system notes.
+\end{DoxyVerb}
+ 
+
+\label{namespacehandlers_1_1notes_doc-func-members}
+\Hypertarget{namespacehandlers_1_1notes_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacehandlers_1_1notes_af32239a1ae7ea9f810ab0cbc05ebcb51}\index{handlers.notes@{handlers.notes}!notes\_page@{notes\_page}}
+\index{notes\_page@{notes\_page}!handlers.notes@{handlers.notes}}
+\doxysubsubsection{\texorpdfstring{notes\_page()}{notes\_page()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1notes_af32239a1ae7ea9f810ab0cbc05ebcb51} 
+ None notes\+\_\+page (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Handles pagination for viewing notes list in current inline message.
+
+@param callback Incoming callback query.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1notes_a5d57a76f99d7e2dbd8f6f6617ade3994}\index{handlers.notes@{handlers.notes}!notes\_page\_new@{notes\_page\_new}}
+\index{notes\_page\_new@{notes\_page\_new}!handlers.notes@{handlers.notes}}
+\doxysubsubsection{\texorpdfstring{notes\_page\_new()}{notes\_page\_new()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1notes_a5d57a76f99d7e2dbd8f6f6617ade3994} 
+ None notes\+\_\+page\+\_\+new (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Renders paginated notes list in a new message after previous views are cleared.
+
+@param callback Incoming callback query.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1notes_a58b065c787c1fd0917d42b530fb72a82}\index{handlers.notes@{handlers.notes}!notes\_start@{notes\_start}}
+\index{notes\_start@{notes\_start}!handlers.notes@{handlers.notes}}
+\doxysubsubsection{\texorpdfstring{notes\_start()}{notes\_start()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1notes_a58b065c787c1fd0917d42b530fb72a82} 
+ None notes\+\_\+start (\begin{DoxyParamCaption}\item[{Message}]{message}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Entry point for displaying notes list via command or keyboard button.
+
+@param message Incoming text message or command.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ 
+
+\label{namespacehandlers_1_1notes_doc-var-members}
+\Hypertarget{namespacehandlers_1_1notes_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacehandlers_1_1notes_a8af2cc9447c1dd8b5365f7862d08514c}\index{handlers.notes@{handlers.notes}!router@{router}}
+\index{router@{router}!handlers.notes@{handlers.notes}}
+\doxysubsubsection{\texorpdfstring{router}{router}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1notes_a8af2cc9447c1dd8b5365f7862d08514c} 
+handlers.\+notes.\+router = Router()}
+

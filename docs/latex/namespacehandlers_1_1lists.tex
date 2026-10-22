@@ -1,0 +1,208 @@
+\doxysection{handlers.\+lists Namespace Reference}
+\hypertarget{namespacehandlers_1_1lists}{}\label{namespacehandlers_1_1lists}\index{handlers.lists@{handlers.lists}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{classhandlers_1_1lists_1_1_list_states}{List\+States}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1lists_ac16a6c539c7a809d0a829ec91fcd5328}{lists\+\_\+start}} (Message message, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1lists_a9fb5fb2c6e5dfd375f92d6366040469f}{lists\+\_\+menu}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1lists_ac2be1848489d9d9c3cf1b0b998c9664c}{lists\+\_\+menu\+\_\+new}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1lists_af5d40558d96919769bbbd96f4ec268ff}{lists\+\_\+create\+\_\+start}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1lists_afb386a4dbe3ea57c31306e9e652fa89e}{lists\+\_\+create\+\_\+finish}} (Message message, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1lists_ae13af0e884e7fe6aa7ccac57babf05b3}{show\+\_\+lists\+\_\+page}} (Callback\+Query callback, FSMContext state, int page=0)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1lists_a6d8ebbf76ada231817e330b57511129e}{lists\+\_\+view}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1lists_a72174cfe80de4db4a19fba9fa7a51a10}{lists\+\_\+view\+\_\+page}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1lists_af52a330c2ca97eca21ed7349189238d8}{show\+\_\+delete\+\_\+lists\+\_\+page}} (Callback\+Query callback, FSMContext state, int page=0)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1lists_a7e32f44d1fbabe9dde868456a34bb6d8}{lists\+\_\+delete\+\_\+start}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1lists_aa1a9a6f6eb78332003bf40215c8f3716}{lists\+\_\+delete\+\_\+page}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1lists_ac5ca1e4049595345b8edb2e7333da52c}{lists\+\_\+delete\+\_\+confirm\+\_\+start}} (Callback\+Query callback, FSMContext state)
+\item 
+None \doxymbox{\hyperlink{namespacehandlers_1_1lists_a02d6bac0ea9733a253535d56814f9030}{lists\+\_\+delete\+\_\+finish}} (Callback\+Query callback, FSMContext state)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespacehandlers_1_1lists_a1ca3b1c39aaba1d80fb9422dde81a248}{router}} = Router()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package handlers
+@brief Telegram bot router handling list navigation, creation, viewing, and deletion.
+\end{DoxyVerb}
+ 
+
+\label{namespacehandlers_1_1lists_doc-func-members}
+\Hypertarget{namespacehandlers_1_1lists_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacehandlers_1_1lists_afb386a4dbe3ea57c31306e9e652fa89e}\index{handlers.lists@{handlers.lists}!lists\_create\_finish@{lists\_create\_finish}}
+\index{lists\_create\_finish@{lists\_create\_finish}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{lists\_create\_finish()}{lists\_create\_finish()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_afb386a4dbe3ea57c31306e9e652fa89e} 
+ None lists\+\_\+create\+\_\+finish (\begin{DoxyParamCaption}\item[{Message}]{message}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Validates input and persists new list creation in database.
+
+@param message Text message containing new list name.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1lists_af5d40558d96919769bbbd96f4ec268ff}\index{handlers.lists@{handlers.lists}!lists\_create\_start@{lists\_create\_start}}
+\index{lists\_create\_start@{lists\_create\_start}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{lists\_create\_start()}{lists\_create\_start()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_af5d40558d96919769bbbd96f4ec268ff} 
+ None lists\+\_\+create\+\_\+start (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Triggers state for creating a new list.
+
+@param callback Incoming callback query.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1lists_ac5ca1e4049595345b8edb2e7333da52c}\index{handlers.lists@{handlers.lists}!lists\_delete\_confirm\_start@{lists\_delete\_confirm\_start}}
+\index{lists\_delete\_confirm\_start@{lists\_delete\_confirm\_start}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{lists\_delete\_confirm\_start()}{lists\_delete\_confirm\_start()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_ac5ca1e4049595345b8edb2e7333da52c} 
+ None lists\+\_\+delete\+\_\+confirm\+\_\+start (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Requests user confirmation to delete a list.
+
+@param callback Incoming callback query.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1lists_a02d6bac0ea9733a253535d56814f9030}\index{handlers.lists@{handlers.lists}!lists\_delete\_finish@{lists\_delete\_finish}}
+\index{lists\_delete\_finish@{lists\_delete\_finish}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{lists\_delete\_finish()}{lists\_delete\_finish()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_a02d6bac0ea9733a253535d56814f9030} 
+ None lists\+\_\+delete\+\_\+finish (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Executes list deletion if list is verified as empty.
+
+@param callback Incoming callback query.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1lists_aa1a9a6f6eb78332003bf40215c8f3716}\index{handlers.lists@{handlers.lists}!lists\_delete\_page@{lists\_delete\_page}}
+\index{lists\_delete\_page@{lists\_delete\_page}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{lists\_delete\_page()}{lists\_delete\_page()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_aa1a9a6f6eb78332003bf40215c8f3716} 
+ None lists\+\_\+delete\+\_\+page (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Pagination for list deletion page view.
+
+@param callback Incoming callback query.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1lists_a7e32f44d1fbabe9dde868456a34bb6d8}\index{handlers.lists@{handlers.lists}!lists\_delete\_start@{lists\_delete\_start}}
+\index{lists\_delete\_start@{lists\_delete\_start}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{lists\_delete\_start()}{lists\_delete\_start()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_a7e32f44d1fbabe9dde868456a34bb6d8} 
+ None lists\+\_\+delete\+\_\+start (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Entry point for list deletion view.
+
+@param callback Incoming callback query.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1lists_a9fb5fb2c6e5dfd375f92d6366040469f}\index{handlers.lists@{handlers.lists}!lists\_menu@{lists\_menu}}
+\index{lists\_menu@{lists\_menu}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{lists\_menu()}{lists\_menu()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_a9fb5fb2c6e5dfd375f92d6366040469f} 
+ None lists\+\_\+menu (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Renders lists management main menu in the current message.
+
+@param callback Incoming callback query.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1lists_ac2be1848489d9d9c3cf1b0b998c9664c}\index{handlers.lists@{handlers.lists}!lists\_menu\_new@{lists\_menu\_new}}
+\index{lists\_menu\_new@{lists\_menu\_new}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{lists\_menu\_new()}{lists\_menu\_new()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_ac2be1848489d9d9c3cf1b0b998c9664c} 
+ None lists\+\_\+menu\+\_\+new (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Displays lists management menu in a new message.
+
+@param callback Incoming callback query.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1lists_ac16a6c539c7a809d0a829ec91fcd5328}\index{handlers.lists@{handlers.lists}!lists\_start@{lists\_start}}
+\index{lists\_start@{lists\_start}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{lists\_start()}{lists\_start()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_ac16a6c539c7a809d0a829ec91fcd5328} 
+ None lists\+\_\+start (\begin{DoxyParamCaption}\item[{Message}]{message}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Entry point for the lists menu via command or menu button.
+
+@param message Incoming text message or command.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1lists_a6d8ebbf76ada231817e330b57511129e}\index{handlers.lists@{handlers.lists}!lists\_view@{lists\_view}}
+\index{lists\_view@{lists\_view}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{lists\_view()}{lists\_view()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_a6d8ebbf76ada231817e330b57511129e} 
+ None lists\+\_\+view (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Entry point to view all user lists starting from page 0.
+
+@param callback Incoming callback query.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1lists_a72174cfe80de4db4a19fba9fa7a51a10}\index{handlers.lists@{handlers.lists}!lists\_view\_page@{lists\_view\_page}}
+\index{lists\_view\_page@{lists\_view\_page}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{lists\_view\_page()}{lists\_view\_page()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_a72174cfe80de4db4a19fba9fa7a51a10} 
+ None lists\+\_\+view\+\_\+page (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Handles pagination navigation across active user lists.
+
+@param callback Incoming callback query.
+@param state Current FSM context instance.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1lists_af52a330c2ca97eca21ed7349189238d8}\index{handlers.lists@{handlers.lists}!show\_delete\_lists\_page@{show\_delete\_lists\_page}}
+\index{show\_delete\_lists\_page@{show\_delete\_lists\_page}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{show\_delete\_lists\_page()}{show\_delete\_lists\_page()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_af52a330c2ca97eca21ed7349189238d8} 
+ None show\+\_\+delete\+\_\+lists\+\_\+page (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{, }\item[{int }]{page}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Renders a page listing deletable empty lists.
+
+@param callback Incoming callback query.
+@param state Current FSM context instance.
+@param page Page index to render.
+\end{DoxyVerb}
+ \Hypertarget{namespacehandlers_1_1lists_ae13af0e884e7fe6aa7ccac57babf05b3}\index{handlers.lists@{handlers.lists}!show\_lists\_page@{show\_lists\_page}}
+\index{show\_lists\_page@{show\_lists\_page}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{show\_lists\_page()}{show\_lists\_page()}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_ae13af0e884e7fe6aa7ccac57babf05b3} 
+ None show\+\_\+lists\+\_\+page (\begin{DoxyParamCaption}\item[{Callback\+Query}]{callback}{, }\item[{FSMContext}]{state}{, }\item[{int }]{page}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Renders lists view with pagination support.
+
+@param callback Incoming callback query.
+@param state Current FSM context instance.
+@param page Page index to render.
+\end{DoxyVerb}
+ 
+
+\label{namespacehandlers_1_1lists_doc-var-members}
+\Hypertarget{namespacehandlers_1_1lists_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacehandlers_1_1lists_a1ca3b1c39aaba1d80fb9422dde81a248}\index{handlers.lists@{handlers.lists}!router@{router}}
+\index{router@{router}!handlers.lists@{handlers.lists}}
+\doxysubsubsection{\texorpdfstring{router}{router}}
+{\footnotesize\ttfamily \label{namespacehandlers_1_1lists_a1ca3b1c39aaba1d80fb9422dde81a248} 
+handlers.\+lists.\+router = Router()}
+

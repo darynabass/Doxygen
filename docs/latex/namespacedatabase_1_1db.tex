@@ -1,0 +1,58 @@
+\doxysection{database.\+db Namespace Reference}
+\hypertarget{namespacedatabase_1_1db}{}\label{namespacedatabase_1_1db}\index{database.db@{database.db}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+None \doxymbox{\hyperlink{namespacedatabase_1_1db_ab4e2a8f07e22e0d1c68143bb72dd6d29}{init\+\_\+db}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \doxymbox{\hyperlink{namespacedatabase_1_1db_a0785e35106a0f5961ad0b5c313ba0bc4}{DB\+\_\+\+NAME}} = "{}activity\+\_\+bot.\+db"{}
+\begin{DoxyCompactList}\small\item\em Name of the SQLite database file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package database
+@brief Database initialization and schema management module.
+
+Handles SQLite connection setup, enables foreign key constraints,
+and creates required tables (users, lists, items).
+\end{DoxyVerb}
+ 
+
+\label{namespacedatabase_1_1db_doc-func-members}
+\Hypertarget{namespacedatabase_1_1db_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacedatabase_1_1db_ab4e2a8f07e22e0d1c68143bb72dd6d29}\index{database.db@{database.db}!init\_db@{init\_db}}
+\index{init\_db@{init\_db}!database.db@{database.db}}
+\doxysubsubsection{\texorpdfstring{init\_db()}{init\_db()}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1db_ab4e2a8f07e22e0d1c68143bb72dd6d29} 
+ None init\+\_\+db (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Asynchronously initializes the database tables and constraints.
+
+Creates the following tables if they do not already exist:
+- `users`: Stores user profile details from Telegram.
+- `lists`: Stores custom task/note lists owned by users.
+- `items`: Stores notes and reminders linked to users and lists.
+
+Also enables SQLite foreign key enforcement (`PRAGMA foreign_keys = ON`).
+
+@exception aiosqlite.Error If a database operation fails.
+\end{DoxyVerb}
+ 
+
+\label{namespacedatabase_1_1db_doc-var-members}
+\Hypertarget{namespacedatabase_1_1db_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacedatabase_1_1db_a0785e35106a0f5961ad0b5c313ba0bc4}\index{database.db@{database.db}!DB\_NAME@{DB\_NAME}}
+\index{DB\_NAME@{DB\_NAME}!database.db@{database.db}}
+\doxysubsubsection{\texorpdfstring{DB\_NAME}{DB\_NAME}}
+{\footnotesize\ttfamily \label{namespacedatabase_1_1db_a0785e35106a0f5961ad0b5c313ba0bc4} 
+str database.\+db.\+DB\+\_\+\+NAME = "{}activity\+\_\+bot.\+db"{}}
+
+
+
+Name of the SQLite database file. 
+

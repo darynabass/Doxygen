@@ -1,0 +1,45 @@
+\doxysection{utils.\+datetime\+\_\+utils Namespace Reference}
+\hypertarget{namespaceutils_1_1datetime__utils}{}\label{namespaceutils_1_1datetime__utils}\index{utils.datetime\_utils@{utils.datetime\_utils}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+datetime\texorpdfstring{$\vert$}{|}None \doxymbox{\hyperlink{namespaceutils_1_1datetime__utils_a9c409243596017a697d0617a8058ca39}{parse\+\_\+user\+\_\+datetime}} (str value)
+\item 
+datetime\texorpdfstring{$\vert$}{|}None \doxymbox{\hyperlink{namespaceutils_1_1datetime__utils_a6aa70329fd3f192dbd86653e2c39a39b}{get\+\_\+quick\+\_\+datetime}} (str value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@package utils
+@brief Module providing utilities for parsing date and time representations from user input.
+\end{DoxyVerb}
+ 
+
+\label{namespaceutils_1_1datetime__utils_doc-func-members}
+\Hypertarget{namespaceutils_1_1datetime__utils_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceutils_1_1datetime__utils_a6aa70329fd3f192dbd86653e2c39a39b}\index{utils.datetime\_utils@{utils.datetime\_utils}!get\_quick\_datetime@{get\_quick\_datetime}}
+\index{get\_quick\_datetime@{get\_quick\_datetime}!utils.datetime\_utils@{utils.datetime\_utils}}
+\doxysubsubsection{\texorpdfstring{get\_quick\_datetime()}{get\_quick\_datetime()}}
+{\footnotesize\ttfamily \label{namespaceutils_1_1datetime__utils_a6aa70329fd3f192dbd86653e2c39a39b} 
+ datetime \texorpdfstring{$\vert$}{|} None get\+\_\+quick\+\_\+datetime (\begin{DoxyParamCaption}\item[{str}]{value}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Converts preset string key identifiers to appropriate datetime instance.
+
+@param value Code identifier representing predefined time offset.
+@return Computed datetime, or None if key is unknown.
+\end{DoxyVerb}
+ \Hypertarget{namespaceutils_1_1datetime__utils_a9c409243596017a697d0617a8058ca39}\index{utils.datetime\_utils@{utils.datetime\_utils}!parse\_user\_datetime@{parse\_user\_datetime}}
+\index{parse\_user\_datetime@{parse\_user\_datetime}!utils.datetime\_utils@{utils.datetime\_utils}}
+\doxysubsubsection{\texorpdfstring{parse\_user\_datetime()}{parse\_user\_datetime()}}
+{\footnotesize\ttfamily \label{namespaceutils_1_1datetime__utils_a9c409243596017a697d0617a8058ca39} 
+ datetime \texorpdfstring{$\vert$}{|} None parse\+\_\+user\+\_\+datetime (\begin{DoxyParamCaption}\item[{str}]{value}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Parses raw text string into a datetime object using regex and strict formats.
+
+Supports structured representations, relative time, and localized Ukrainian phrases.
+
+@param value Text containing target date/time input.
+@return Parsed datetime object, or None if parsing failed.
+\end{DoxyVerb}
+ 
